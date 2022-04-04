@@ -16,7 +16,7 @@ namespace RedCrossWithBDD.StepDefinitions
             driver = new ChromeDriver();
             driver.Manage().Cookies.DeleteAllCookies();
             driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl(homePageUrl);
+            driver.Navigate().GoToUrl(url);
         }
         [Given(@"user managed the cookies")]
         public void GivenUserManagedTheCookies()
@@ -34,8 +34,8 @@ namespace RedCrossWithBDD.StepDefinitions
             driver.FindElement(By.PartialLinkText("account")).Click();
         }
         
-        [When(@"user clicked on Create New Account Button")]
-        [Given(@"user clicked on Create New Account Button")]
+        [When(@"user clicked on Create your account Button")]
+        [Given(@"user clicked on Create your account Button")]
         [Given(@"Signup dialogue box appears")]
         [Then(@"Signup dialogue box appears")]
         public void ThenSignupDialogueBoxAppears()
@@ -44,6 +44,33 @@ namespace RedCrossWithBDD.StepDefinitions
             // driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(9000);
           
         }
+        [When(@"user clicked on Shope Home menu button")]
+        [Then(@"user is on landing page of the application")]
+        public void WhenUserClickedOnShopeHomeMenuButton()
+        {
+            driver.FindElement(By.PartialLinkText("Shop Home")).Click();
+        }
+        [When(@"user clicked on New In menu button")]
+        public void WhenUserClickedOnNewInMenuButton()
+        {
+            driver.FindElement(By.PartialLinkText("New In")).Click();
+        }
+
+        [Then(@"user is redirected to New Arrivals page")]
+        public void ThenUserIsRedirectedToNewArrivalsPage()
+        {
+            throw new PendingStepException();
+        }
+
+
+        [Then(@"user closed the browser")]
+        public void ThenUserClosedTheBrowser()
+        {
+            Thread.Sleep(2000);
+            driver.Quit();
+            
+        }
+
 
 
     }

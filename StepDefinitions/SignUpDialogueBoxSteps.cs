@@ -14,8 +14,7 @@ namespace RedCrossWithBDD.StepDefinitions
         public void WhenUserEnteredValidFirstName()
         {
             IWebElement firstname = driver.FindElement(By.XPath("(//form[@class='form'])[3]//input[contains(@name, 'customer[first_name]')]"));
-            //((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", firstname); 
-            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value='demo';",firstname);
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value='Poorva';",firstname);
 
 
         }
@@ -24,21 +23,21 @@ namespace RedCrossWithBDD.StepDefinitions
         public void WhenUserEnteredValidLastName()
         {
             IWebElement lastname = driver.FindElement(By.Id("customer[last_name]"));
-            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value='user';", lastname);
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value='Malhotra';", lastname);
         }
 
         [When(@"user entered Valid Email")]
         public void WhenUserEnteredValidEmail()
         {
             IWebElement email = driver.FindElement(By.Id("register-customer[email]"));
-            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value='demouser1234@gmail.com';", email);
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value='poorvamalhotra815@gmail.com';", email);
         }
 
         [When(@"user entered Valid Password")]
         public void WhenUserEnteredValidPassword()
         {
             IWebElement pass = driver.FindElement(By.Id("register-customer[password]"));
-            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value='demouser1234@';", pass);
+            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value='poorvamalhotra815@';", pass);
           
         }
 
