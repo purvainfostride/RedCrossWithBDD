@@ -24,4 +24,15 @@ Scenario: To Verify whether New In menu button directing user to the home page
 	When user clicked on New In menu button
 	Then user is redirected to New Arrivals page
 
+Scenario: To Verify whether Virtual Gifts menu button directing user to the home page 
+	Given user is on Home page
+	And user managed the cookies 
+	When user clicked on Virtual Gifts menu button
+	Then user is redirected to Virtual Gifts page
+
+Scenario: To Verify whether Sale menu button directing user to the home page 
+	Given user is on Home page
+	And user managed the cookies 
+	When user clicked on Sale menu button
+	Then user is redirected to Sale page
 

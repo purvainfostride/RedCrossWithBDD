@@ -51,16 +51,27 @@ namespace RedCrossWithBDD.StepDefinitions
             driver.FindElement(By.PartialLinkText("Shop Home")).Click();
         }
         [When(@"user clicked on New In menu button")]
+        [Then(@"user is redirected to New Arrivals page")]
         public void WhenUserClickedOnNewInMenuButton()
         {
             driver.FindElement(By.PartialLinkText("New In")).Click();
         }
 
-        [Then(@"user is redirected to New Arrivals page")]
-        public void ThenUserIsRedirectedToNewArrivalsPage()
+        [When(@"user clicked on Virtual Gifts menu button")]
+        [Then(@"user is redirected to Virtual Gifts page")]
+        public void WhenUserClickedOnVirtualGiftsMenuButton()
         {
-            throw new PendingStepException();
+            driver.FindElement(By.PartialLinkText("Virtual Gifts")).Click();
         }
+
+        [When(@"user clicked on Sale menu button")]
+        [Then(@"user is redirected to Sale page")]
+        public void WhenUserClickedOnSaleMenuButton()
+        {
+            driver.FindElement(By.PartialLinkText("Sale")).Click();
+        }
+
+
 
 
         [Then(@"user closed the browser")]
