@@ -13,11 +13,8 @@ namespace RedCrossWithBDD.StepDefinitions
         [When(@"user entered Valid FirstName")]
         public void WhenUserEnteredValidFirstName()
         {
-            //driver.FindElement(By.XPath("(//form[@class='form'])[3]//input[contains(@name, 'customer[first_name]')]")).Click();
-            //driver.FindElement(By.XPath("(//form[@class='form'])[3]//input[contains(@name, 'customer[first_name]')]")).SendKeys("Demo");
             IWebElement firstname = driver.FindElement(By.XPath("(//form[@class='form'])[3]//input[contains(@name, 'customer[first_name]')]"));
-            ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", firstname); 
-           // ((IJavaScriptExecutor)driver).ExecuteScript("document.getElementById('customer[first_name]').value='demo';");
+            //((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].click();", firstname); 
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value='demo';",firstname);
 
 
@@ -35,8 +32,6 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             IWebElement email = driver.FindElement(By.Id("register-customer[email]"));
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value='demouser1234@gmail.com';", email);
-            //driver.FindElement(By.Id("register-customer[email]")).Click();
-            //driver.FindElement(By.Id("register-customer[email]")).SendKeys("demouser1234@gmail.com");
         }
 
         [When(@"user entered Valid Password")]
@@ -44,8 +39,7 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             IWebElement pass = driver.FindElement(By.Id("register-customer[password]"));
             ((IJavaScriptExecutor)driver).ExecuteScript("arguments[0].value='demouser1234@';", pass);
-            //driver.FindElement(By.Id("register-customer[password]")).Click();
-            //driver.FindElement(By.Id("register-customer[password]")).SendKeys("demouser1234@");
+          
         }
 
         [Then(@"user clicked on Create My Account button")]
