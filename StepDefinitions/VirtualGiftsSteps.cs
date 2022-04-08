@@ -83,13 +83,11 @@ namespace RedCrossWithBDD.StepDefinitions
             driver.FindElement(By.XPath("//div[@class='product-form__payment-container']//button")).Click();
             Assert.AreEqual(cartPageUrl,driver.Url);
         }
-        [Then(@"user checkout the product from cart")]
-        public void ThenUserCheckoutTheProductFromCart()
-        {
-            driver.FindElement(By.XPath("//button[@class='cart-recap__checkout button button--primary button--full button--large")).Click();
-        }
-
-        
+        //[Then(@"user checkout the product from cart")]
+        //public void ThenUserCheckoutTheProductFromCart()
+        //{
+        //    driver.FindElement(By.XPath("//button[@class='cart-recap__checkout button button--primary button--full button--large")).Click();
+        //}
 
     }
 }
