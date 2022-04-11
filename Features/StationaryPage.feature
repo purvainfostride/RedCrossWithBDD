@@ -60,7 +60,7 @@ Scenario: To Validate Display filter sort items 24 per page
 #	And page filtered with items 48 per page
 #	And user closed the browser
 
-@GreetingcardSPage
+@GreetingcardsPage
 Scenario: To Validate BestSelling filter sort items 24 per page
 	Given user is on Landing page of the application
 	And user managed the cookies 
@@ -71,3 +71,13 @@ Scenario: To Validate BestSelling filter sort items 24 per page
 	Then selected Alphabetically A-Z
 	And page filtered with items Alphabetically A-Z
 	And user closed the browser
+
+@GreetingcardsPage
+Scenario: To Validate whether user is able to select greeting cards from greeting card page
+	Given user is on Landing page of the application
+	And user managed the cookies 
+	And user clicked on Stationary menu button
+	And user selected greeting cards catagory to shop
+	When user is on greeting cards page
+	Then user select greeting card to send
+	

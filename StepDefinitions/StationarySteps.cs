@@ -9,7 +9,7 @@ namespace RedCrossWithBDD.StepDefinitions
 {
     [Binding]
     public class StationarySteps:BasePage
-    {
+    {   private  string t="(//div//div[@class='aspect-ratio '])[%s]";
         [When(@"user clicked on Stationary menu button")]
         [Given(@"user clicked on Stationary menu button")]
         public void WhenUserClickedOnStationaryMenuButton()
@@ -142,6 +142,19 @@ namespace RedCrossWithBDD.StepDefinitions
         public void ThenPageFilteredWithItemsAlphabeticallyA_Z()
         {
             throw new PendingStepException();
+        }
+        //[Then(@"user select greeting card to send")]
+        //public void ThenUserSelectGreetingCardToSend()
+        //{
+        //    IWebElement t = driver.FindElement(By.XPath("//div//div[@class='product-list product-list--collection product-list--with-sidebar']"));
+        //    t.Size.ToString();
+
+        //    for (int i = 1; i < 28; i++)
+        //    {
+        //        driver.FindElement(By.XPath(String.Format(t, i)).Click();
+        //    }
+
+
         }
 
 
