@@ -1,7 +1,7 @@
 ﻿Feature: Checking functionality of HomePage of the Application
 
 @HomePage
-Scenario: To validate whether user is on Home Page of the application
+Scenario: To validate whether user is on Landing page of the application of the application
 	Given user initialized the browser
 	When user navigated to the Application
 	Then user is on Landing page of the application

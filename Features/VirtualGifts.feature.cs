@@ -74,14 +74,16 @@ namespace RedCrossWithBDD.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify whether Virtual Gifts menu button directing user to the home page")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether Virtual Gifts menu button directing user to virtual gifts pag" +
+            "e")]
         [NUnit.Framework.CategoryAttribute("VirtualPage")]
-        public virtual void ToVerifyWhetherVirtualGiftsMenuButtonDirectingUserToTheHomePage()
+        public virtual void ToValidateWhetherVirtualGiftsMenuButtonDirectingUserToVirtualGiftsPage()
         {
             string[] tagsOfScenario = new string[] {
                     "VirtualPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify whether Virtual Gifts menu button directing user to the home page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether Virtual Gifts menu button directing user to virtual gifts pag" +
+                    "e", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -103,7 +105,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 5
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 6
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -122,14 +124,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify whether user is able to select virtual gifts to send")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether user is able to select virtual gifts to send")]
         [NUnit.Framework.CategoryAttribute("VirtualPage")]
-        public virtual void ToVerifyWhetherUserIsAbleToSelectVirtualGiftsToSend()
+        public virtual void ToValidateWhetherUserIsAbleToSelectVirtualGiftsToSend()
         {
             string[] tagsOfScenario = new string[] {
                     "VirtualPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify whether user is able to select virtual gifts to send", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether user is able to select virtual gifts to send", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 12
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -151,7 +153,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 13
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 14
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -173,14 +175,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify User Added Virtual gift to cart with Greeting Card")]
+        [NUnit.Framework.DescriptionAttribute("To Validate User Added Virtual gift to cart with Greeting Card")]
         [NUnit.Framework.CategoryAttribute("AddVirtualPageProductToCart")]
-        public virtual void ToVerifyUserAddedVirtualGiftToCartWithGreetingCard()
+        public virtual void ToValidateUserAddedVirtualGiftToCartWithGreetingCard()
         {
             string[] tagsOfScenario = new string[] {
                     "AddVirtualPageProductToCart"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify User Added Virtual gift to cart with Greeting Card", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate User Added Virtual gift to cart with Greeting Card", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 21
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -202,7 +204,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 22
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 23
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -214,10 +216,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("user is redirected to Virtual Gifts page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 26
- testRunner.Then("user clicked on the gift to be selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("user clicked on the gift to be selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 27
- testRunner.And("user selected a greeting card", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("user selected a greeting card", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 28
  testRunner.And("user entered the Message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -233,14 +235,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify User Added Virtual gift to cart with Ecard")]
+        [NUnit.Framework.DescriptionAttribute("To Validate User Added Virtual gift to cart with Ecard")]
         [NUnit.Framework.CategoryAttribute("AddVirtualPageProductToCart")]
-        public virtual void ToVerifyUserAddedVirtualGiftToCartWithEcard()
+        public virtual void ToValidateUserAddedVirtualGiftToCartWithEcard()
         {
             string[] tagsOfScenario = new string[] {
                     "AddVirtualPageProductToCart"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify User Added Virtual gift to cart with Ecard", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate User Added Virtual gift to cart with Ecard", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 33
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -262,7 +264,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 34
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 35
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -274,10 +276,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("user is redirected to Virtual Gifts page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 38
- testRunner.Then("user clicked on the gift to be selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("user clicked on the gift to be selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 39
- testRunner.And("user selected an Ecard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("user selected an Ecard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 40
  testRunner.And("user entered Recipient\'s Name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -302,14 +304,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify User Added Virtual gift to cart without any card")]
+        [NUnit.Framework.DescriptionAttribute("To Validate User Added Virtual gift to cart without any card")]
         [NUnit.Framework.CategoryAttribute("AddVirtualPageProductToCart")]
-        public virtual void ToVerifyUserAddedVirtualGiftToCartWithoutAnyCard()
+        public virtual void ToValidateUserAddedVirtualGiftToCartWithoutAnyCard()
         {
             string[] tagsOfScenario = new string[] {
                     "AddVirtualPageProductToCart"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify User Added Virtual gift to cart without any card", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate User Added Virtual gift to cart without any card", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 48
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -331,7 +333,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 49
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 50
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -343,10 +345,10 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("user is redirected to Virtual Gifts page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 53
- testRunner.Then("user clicked on the gift to be selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("user clicked on the gift to be selected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 54
- testRunner.And("user haven\'t selected a card", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("user haven\'t selected a card", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 55
  testRunner.And("user entered the Message which is optional", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

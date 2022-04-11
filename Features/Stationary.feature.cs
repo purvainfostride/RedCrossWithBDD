@@ -74,14 +74,14 @@ namespace RedCrossWithBDD.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify whether user is able to redirect to greeting cards page")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether user is able to redirect to greeting cards page")]
         [NUnit.Framework.CategoryAttribute("StationaryPage")]
-        public virtual void ToVerifyWhetherUserIsAbleToRedirectToGreetingCardsPage()
+        public virtual void ToValidateWhetherUserIsAbleToRedirectToGreetingCardsPage()
         {
             string[] tagsOfScenario = new string[] {
                     "StationaryPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify whether user is able to redirect to greeting cards page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether user is able to redirect to greeting cards page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -103,7 +103,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 8
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -125,14 +125,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify whether user is able to redirect to Birthday cards page")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether user is able to redirect to Birthday cards page")]
         [NUnit.Framework.CategoryAttribute("StationaryPage")]
-        public virtual void ToVerifyWhetherUserIsAbleToRedirectToBirthdayCardsPage()
+        public virtual void ToValidateWhetherUserIsAbleToRedirectToBirthdayCardsPage()
         {
             string[] tagsOfScenario = new string[] {
                     "StationaryPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify whether user is able to redirect to Birthday cards page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether user is able to redirect to Birthday cards page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -154,7 +154,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 16
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 17
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -176,14 +176,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify whether user is able to redirect to Congratulations cards page")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether user is able to redirect to Congratulations cards page")]
         [NUnit.Framework.CategoryAttribute("StationaryPage")]
-        public virtual void ToVerifyWhetherUserIsAbleToRedirectToCongratulationsCardsPage()
+        public virtual void ToValidateWhetherUserIsAbleToRedirectToCongratulationsCardsPage()
         {
             string[] tagsOfScenario = new string[] {
                     "StationaryPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify whether user is able to redirect to Congratulations cards page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether user is able to redirect to Congratulations cards page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -205,7 +205,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 25
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 26
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -227,14 +227,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify whether user is able to redirect to Thankyou cards page")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether user is able to redirect to Thankyou cards page")]
         [NUnit.Framework.CategoryAttribute("StationaryPage")]
-        public virtual void ToVerifyWhetherUserIsAbleToRedirectToThankyouCardsPage()
+        public virtual void ToValidateWhetherUserIsAbleToRedirectToThankyouCardsPage()
         {
             string[] tagsOfScenario = new string[] {
                     "StationaryPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify whether user is able to redirect to Thankyou cards page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether user is able to redirect to Thankyou cards page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 33
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -256,7 +256,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 34
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 35
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -278,14 +278,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify whether user is able to redirect to Wrapping paper page")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether user is able to redirect to Wrapping paper page")]
         [NUnit.Framework.CategoryAttribute("StationaryPage")]
-        public virtual void ToVerifyWhetherUserIsAbleToRedirectToWrappingPaperPage()
+        public virtual void ToValidateWhetherUserIsAbleToRedirectToWrappingPaperPage()
         {
             string[] tagsOfScenario = new string[] {
                     "StationaryPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify whether user is able to redirect to Wrapping paper page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether user is able to redirect to Wrapping paper page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 42
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -307,7 +307,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 43
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 44
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -329,14 +329,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify whether user is able to redirect to Notebooks page")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether user is able to redirect to Notebooks page")]
         [NUnit.Framework.CategoryAttribute("StationaryPage")]
-        public virtual void ToVerifyWhetherUserIsAbleToRedirectToNotebooksPage()
+        public virtual void ToValidateWhetherUserIsAbleToRedirectToNotebooksPage()
         {
             string[] tagsOfScenario = new string[] {
                     "StationaryPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify whether user is able to redirect to Notebooks page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether user is able to redirect to Notebooks page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 51
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -358,7 +358,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 52
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 53
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -380,14 +380,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify whether user is able to redirect to Enamel Pin Badges page")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether user is able to redirect to Enamel Pin Badges page")]
         [NUnit.Framework.CategoryAttribute("StationaryPage")]
-        public virtual void ToVerifyWhetherUserIsAbleToRedirectToEnamelPinBadgesPage()
+        public virtual void ToValidateWhetherUserIsAbleToRedirectToEnamelPinBadgesPage()
         {
             string[] tagsOfScenario = new string[] {
                     "StationaryPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify whether user is able to redirect to Enamel Pin Badges page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether user is able to redirect to Enamel Pin Badges page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 60
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -409,7 +409,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 61
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 62
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -431,14 +431,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify Display filter sort items 24 per page")]
+        [NUnit.Framework.DescriptionAttribute("To Validate Display filter sort items 24 per page")]
         [NUnit.Framework.CategoryAttribute("GreetingcardSPage")]
-        public virtual void ToVerifyDisplayFilterSortItems24PerPage()
+        public virtual void ToValidateDisplayFilterSortItems24PerPage()
         {
             string[] tagsOfScenario = new string[] {
                     "GreetingcardSPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify Display filter sort items 24 per page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate Display filter sort items 24 per page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 69
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -460,7 +460,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 70
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 71
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -491,14 +491,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Verify BestSelling filter sort items 24 per page")]
+        [NUnit.Framework.DescriptionAttribute("To Validate BestSelling filter sort items 24 per page")]
         [NUnit.Framework.CategoryAttribute("GreetingcardSPage")]
-        public virtual void ToVerifyBestSellingFilterSortItems24PerPage()
+        public virtual void ToValidateBestSellingFilterSortItems24PerPage()
         {
             string[] tagsOfScenario = new string[] {
                     "GreetingcardSPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Verify BestSelling filter sort items 24 per page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate BestSelling filter sort items 24 per page", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 105
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -520,7 +520,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 106
- testRunner.Given("user is on Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 107
  testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

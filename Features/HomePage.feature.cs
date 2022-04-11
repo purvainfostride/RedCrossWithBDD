@@ -74,14 +74,16 @@ namespace RedCrossWithBDD.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To validate whether user is on Home Page of the application")]
+        [NUnit.Framework.DescriptionAttribute("To validate whether user is on Landing page of the application of the application" +
+            "")]
         [NUnit.Framework.CategoryAttribute("HomePage")]
-        public virtual void ToValidateWhetherUserIsOnHomePageOfTheApplication()
+        public virtual void ToValidateWhetherUserIsOnLandingPageOfTheApplicationOfTheApplication()
         {
             string[] tagsOfScenario = new string[] {
                     "HomePage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate whether user is on Home Page of the application", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate whether user is on Landing page of the application of the application" +
+                    "", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden

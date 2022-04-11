@@ -9,6 +9,7 @@ namespace RedCrossWithBDD.StepDefinitions
     [Binding]
     public class VirtualGiftsSteps:BasePage
     {
+        [When(@"user clicked on the gift to be selected")]
         [Then(@"user clicked on the gift to be selected")]
         public void ThenUserClickedOnTheGiftToBeSelected()
         {

@@ -2,8 +2,8 @@
 
 
 @checkoutVirtualPageProduct
-Scenario: To Verify User is able to checkout the gift from cart
-	Given user is on Home page
+Scenario: To Validate User is able to checkout the gift from cart
+	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on Virtual Gifts menu button
 	When user is redirected to Virtual Gifts page
@@ -16,8 +16,8 @@ Scenario: To Verify User is able to checkout the gift from cart
 	And user closed the browser
 
 @checkoutVirtualPageProduct
-Scenario: To Verify User is able to add suggested gift and checkout from cart
-	Given user is on Home page
+Scenario: To Validate User is able to add suggested gift and checkout from cart
+	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on Virtual Gifts menu button
 	When user is redirected to Virtual Gifts page
@@ -31,8 +31,8 @@ Scenario: To Verify User is able to add suggested gift and checkout from cart
 	And user closed the browser
 
 @checkoutVirtualPageProduct
-Scenario: To Verify User is able to perform payment transaction for gift
-	Given user is on Home page
+Scenario: To Validate User is able to perform payment transaction for gift
+	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on Virtual Gifts menu button
 	When user is redirected to Virtual Gifts page
@@ -46,8 +46,8 @@ Scenario: To Verify User is able to perform payment transaction for gift
 	And user entered personal details
 	
 @test
-Scenario: To Verify User is able to perform payment transaction 
-	Given user is on Home page
+Scenario: To Validate User is able to perform payment transaction 
+	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on Virtual Gifts menu button
 	When user is redirected to Virtual Gifts page
