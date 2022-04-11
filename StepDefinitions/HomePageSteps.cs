@@ -1,14 +1,10 @@
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using WebDriverManager;
-using WebDriverManager.DriverConfigs.Impl;
 using RedCrossWithBDD.Pages;
 using NUnit.Framework;
 
 namespace RedCrossWithBDD.StepDefinitions
 {
     [Binding]
-    public sealed class HomePageSteps:BasePage
+    public class HomePageSteps:BasePage
     {
         HomePage homePage = new HomePage();
 
@@ -34,6 +30,7 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             homePage.UserClickedOnMyAccountButton();
         }
+
         [When(@"user clicked on Create your account Button")]
         [Given(@"user clicked on Create your account Button")]
         [Given(@"Signup dialogue box appears")]
@@ -117,13 +114,11 @@ namespace RedCrossWithBDD.StepDefinitions
         [Given(@"user is on Virtual Gifts Page")]
         [When(@"user is on Virtual Gifts Page")]
 
-
         public void ThenUserIsRedirectedToVirtualGiftsPage()
         {
             homePage.UserClickedOnVirtualGiftsMenuButton();
             Assert.AreEqual(virtualGiftsPageUrl, driver.Url);
         }
-
 
         [When(@"user clicked on Sale menu button")]
 
@@ -140,8 +135,6 @@ namespace RedCrossWithBDD.StepDefinitions
             homePage.UserClosedTheBrowser();
             
         }
-
-
 
     }
 }

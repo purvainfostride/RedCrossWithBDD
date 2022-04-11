@@ -1,54 +1,43 @@
 using RedCrossWithBDD.Pages;
-using System;
-using TechTalk.SpecFlow;
 using OpenQA.Selenium;
-using NUnit.Framework;
 
 namespace RedCrossWithBDD.StepDefinitions
 {
     [Binding]
-    public class VirtualGiftsSteps:BasePage
+    public class VirtualGiftsPageSteps:BasePage
     {
+        VirtualGiftsPage virtualGiftsPage = new VirtualGiftsPage();
+
         [When(@"user clicked on the gift to be selected")]
         [Then(@"user clicked on the gift to be selected")]
         public void ThenUserClickedOnTheGiftToBeSelected()
         {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("window.scrollBy(0,650);");
-            driver.FindElement(By.XPath("((//div[@class='gift-image'])[1]//img)[2]")).Click();
+            virtualGiftsPage.UserClickedOnTheGiftToBeSelected();
         }
 
         [Then(@"user selected a greeting card")]
         public void ThenUserSelectedAGreetingCard()
         {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("window.scrollBy(0,650);");
-            driver.FindElement(By.XPath("//label[@title='Happy Birthday']//span")).Click();
+            virtualGiftsPage.UserSelectedAGreetingCard();
         }
 
         [When(@"user haven't selected a card")]
         [Then(@"user haven't selected a card")]
         public void ThenUserHaventSelectedACard()
         {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("window.scrollBy(0,650);");
-            driver.FindElement(By.XPath("//span[contains(text(),'Send an e-card')]/following::span[1]")).Click();
+            virtualGiftsPage.UserHaventSelectedACard();
         }
         
-
         [Then(@"user selected an Ecard")]
         public void ThenUserSelectedAnEcard()
         {
-            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("window.scrollBy(0,650);");
-            driver.FindElement(By.XPath("//label[contains(@title,'Send an e-card')]//span")).Click();
+            virtualGiftsPage.UserSelectedAnEcard();
         }
 
         [Then(@"user entered Recipient's Name")]
         public void ThenUserEnteredRecipientsName()
         {
-           
-            driver.FindElement(By.Id("ecard-field--recipients-name")).SendKeys("RNAME");
+            virtualGiftsPage.UserEnteredRecipientsName();
         }
 
         [Then(@"user entered his/her Name")]
@@ -60,33 +49,32 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"user entered the Message")]
         public void ThenUserEnteredTheMessage()
         {
-             driver.FindElement(By.XPath("(//div[@class='ecard-field'])[5]/textarea")).SendKeys("Sending message");
+            virtualGiftsPage.UserEnteredTheMessage();
         }
         [Then(@"user entered the Message with word limit")]
         public void ThenUserEnteredTheMessageWithWordLimit()
         {
-            driver.FindElement(By.XPath("(//div[@class='ecard-field'])[3]/textarea")).SendKeys("Sending message");
+            virtualGiftsPage.UserEnteredTheMessageWithWordLimit();
         }
 
         [When(@"user entered the Message which is optional")]
         [Then(@"user entered the Message which is optional")]
         public void ThenUserEnteredTheMessageWhichIsOptional()
         {
-            driver.FindElement(By.XPath("(//div[@class='ecard-fields ecard-fields--nothing'])//div//textarea")).SendKeys("Sending message");
+            virtualGiftsPage.UserEnteredTheMessageWhichIsOptional();
         }
 
         [Then(@"user entered the Message Recipient's Email")]
         public void ThenUserEnteredTheMessageRecipientsEmail()
         {
-              driver.FindElement(By.Id("ecard-field--recipients-email")).SendKeys("RName@gmail.com");
+            virtualGiftsPage.UserEnteredTheMessageRecipientsEmail();
         }
 
         [Then(@"user added the gift to cart")]
         [When(@"user added the gift to cart")]
         public void ThenUserAddedTheGiftToCart()
         {
-            driver.FindElement(By.XPath("//div[@class='product-form__payment-container']//button")).Click();
-            Assert.AreEqual(cartPageUrl,driver.Url);
+            virtualGiftsPage.UserAddedTheGiftToCart();
         }
         //[Then(@"user checkout the product from cart")]
         //public void ThenUserCheckoutTheProductFromCart()

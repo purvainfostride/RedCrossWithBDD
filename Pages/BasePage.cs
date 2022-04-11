@@ -10,7 +10,7 @@ namespace RedCrossWithBDD.Pages
         public string loginPageUrl = "https://giftshop.redcross.org.uk/account/login";
         public string newInPageUrl = "https://giftshop.redcross.org.uk/collections/new-in";
 
-        public string stationaryGreetingsPage= "https://giftshop.redcross.org.uk/collections/greetings-cards";
+        public string stationaryGreetingsPageUrl= "https://giftshop.redcross.org.uk/collections/greetings-cards";
         public string stationaryBirthdayCardPage = "https://giftshop.redcross.org.uk/collections/birthday-cards";
         public string stationaryCongratulationsCardPage = "https://giftshop.redcross.org.uk/collections/congratulations-cards"; 
         public string stationaryThankyouCardPage = "https://giftshop.redcross.org.uk/collections/thank-you-cards";
