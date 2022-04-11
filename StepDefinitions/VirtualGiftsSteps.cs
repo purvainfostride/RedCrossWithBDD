@@ -15,7 +15,7 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             js.ExecuteScript("window.scrollBy(0,650);");
-            driver.FindElement(By.XPath("//div[@class='gift-image']//a//img[@class='under lazyloaded']")).Click();
+            driver.FindElement(By.XPath("((//div[@class='gift-image'])[1]//img)[2]")).Click();
         }
 
         [Then(@"user selected a greeting card")]

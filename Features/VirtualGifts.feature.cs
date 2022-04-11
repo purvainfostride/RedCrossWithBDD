@@ -175,14 +175,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Validate User Added Virtual gift to cart with Greeting Card")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether user is able to Add Virtual gift to cart with Greeting Card")]
         [NUnit.Framework.CategoryAttribute("AddVirtualPageProductToCart")]
-        public virtual void ToValidateUserAddedVirtualGiftToCartWithGreetingCard()
+        public virtual void ToValidateWhetherUserIsAbleToAddVirtualGiftToCartWithGreetingCard()
         {
             string[] tagsOfScenario = new string[] {
                     "AddVirtualPageProductToCart"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate User Added Virtual gift to cart with Greeting Card", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether user is able to Add Virtual gift to cart with Greeting Card", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 21
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -235,14 +235,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Validate User Added Virtual gift to cart with Ecard")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether user is able to Add Virtual gift to cart with Ecard")]
         [NUnit.Framework.CategoryAttribute("AddVirtualPageProductToCart")]
-        public virtual void ToValidateUserAddedVirtualGiftToCartWithEcard()
+        public virtual void ToValidateWhetherUserIsAbleToAddVirtualGiftToCartWithEcard()
         {
             string[] tagsOfScenario = new string[] {
                     "AddVirtualPageProductToCart"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate User Added Virtual gift to cart with Ecard", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether user is able to Add Virtual gift to cart with Ecard", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 33
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -304,14 +304,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Validate User Added Virtual gift to cart without any card")]
+        [NUnit.Framework.DescriptionAttribute("To Validate whether user is able to Add Virtual gift to cart without any card")]
         [NUnit.Framework.CategoryAttribute("AddVirtualPageProductToCart")]
-        public virtual void ToValidateUserAddedVirtualGiftToCartWithoutAnyCard()
+        public virtual void ToValidateWhetherUserIsAbleToAddVirtualGiftToCartWithoutAnyCard()
         {
             string[] tagsOfScenario = new string[] {
                     "AddVirtualPageProductToCart"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate User Added Virtual gift to cart without any card", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate whether user is able to Add Virtual gift to cart without any card", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 48
 this.ScenarioInitialize(scenarioInfo);
 #line hidden

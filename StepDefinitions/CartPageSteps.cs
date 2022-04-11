@@ -21,12 +21,15 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             driver.FindElement(By.XPath("//button[@name='checkout']")).Click();
         }
-        
-        [Then(@"user added another gift from suggestion to cart")]
-        public void ThenUserAddedAnotherGiftFromSuggestionToCart()
+        [Then(@"user selected another gift from suggestions")]
+        public void ThenUserSelectedAnotherGiftFromSuggestions()
         {
-            driver.FindElement(By.XPath("(//form)[5]//button")).Click();
+            driver.Navigate().Back();
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollBy(0,650);");
+            driver.FindElement(By.LinkText("A hygiene pack for a refugee")).Click();
         }
+
         [Then(@"user entered personal details")]
         public void ThenUserEnteredPersonalDetails()
         {

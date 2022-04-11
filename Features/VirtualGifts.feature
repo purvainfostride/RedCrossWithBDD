@@ -18,7 +18,7 @@ Scenario: To Validate whether user is able to select virtual gifts to send
 	And user closed the browser
 
 @AddVirtualPageProductToCart
-Scenario: To Validate User Added Virtual gift to cart with Greeting Card
+Scenario: To Validate whether user is able to Add Virtual gift to cart with Greeting Card
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on Virtual Gifts menu button
@@ -30,7 +30,7 @@ Scenario: To Validate User Added Virtual gift to cart with Greeting Card
 	And user closed the browser
 
 @AddVirtualPageProductToCart
-Scenario: To Validate User Added Virtual gift to cart with Ecard
+Scenario: To Validate whether user is able to Add Virtual gift to cart with Ecard
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on Virtual Gifts menu button
@@ -45,7 +45,7 @@ Scenario: To Validate User Added Virtual gift to cart with Ecard
 	And user closed the browser
 
 @AddVirtualPageProductToCart
-Scenario: To Validate User Added Virtual gift to cart without any card
+Scenario: To Validate whether user is able to Add Virtual gift to cart without any card
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on Virtual Gifts menu button
