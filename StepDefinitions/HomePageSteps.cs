@@ -113,13 +113,17 @@ namespace RedCrossWithBDD.StepDefinitions
 
         [When(@"user clicked on Virtual Gifts menu button")]
         [Given(@"user clicked on Virtual Gifts menu button")]
-        [Then(@"user is redirected to Virtual Gifts page")]
-        [When(@"user is redirected to Virtual Gifts page")]
+        [Then(@"user is on Virtual Gifts Page")]
+        [Given(@"user is on Virtual Gifts Page")]
+        [When(@"user is on Virtual Gifts Page")]
+
+
         public void ThenUserIsRedirectedToVirtualGiftsPage()
         {
             homePage.UserClickedOnVirtualGiftsMenuButton();
             Assert.AreEqual(virtualGiftsPageUrl, driver.Url);
         }
+
 
         [When(@"user clicked on Sale menu button")]
 

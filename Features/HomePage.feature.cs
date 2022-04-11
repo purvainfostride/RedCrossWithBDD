@@ -307,7 +307,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("user clicked on Virtual Gifts menu button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 49
- testRunner.Then("user is redirected to Virtual Gifts page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("user is on Virtual Gifts Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 50
  testRunner.When("user clicked on Sale menu button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

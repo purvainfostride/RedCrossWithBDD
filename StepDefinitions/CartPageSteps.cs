@@ -10,6 +10,7 @@ namespace RedCrossWithBDD.StepDefinitions
     [Binding]
     public class CartPageSteps:BasePage
     {
+        [When(@"user selected keeping in touch")]
         [Then(@"user selected keeping in touch")]
         public void ThenUserSelectedKeepingInTouch()
         {

@@ -26,6 +26,7 @@ namespace RedCrossWithBDD.StepDefinitions
             driver.FindElement(By.XPath("//label[@title='Happy Birthday']//span")).Click();
         }
 
+        [When(@"user haven't selected a card")]
         [Then(@"user haven't selected a card")]
         public void ThenUserHaventSelectedACard()
         {
@@ -33,6 +34,7 @@ namespace RedCrossWithBDD.StepDefinitions
             js.ExecuteScript("window.scrollBy(0,650);");
             driver.FindElement(By.XPath("//span[contains(text(),'Send an e-card')]/following::span[1]")).Click();
         }
+        
 
         [Then(@"user selected an Ecard")]
         public void ThenUserSelectedAnEcard()
@@ -66,6 +68,7 @@ namespace RedCrossWithBDD.StepDefinitions
             driver.FindElement(By.XPath("(//div[@class='ecard-field'])[3]/textarea")).SendKeys("Sending message");
         }
 
+        [When(@"user entered the Message which is optional")]
         [Then(@"user entered the Message which is optional")]
         public void ThenUserEnteredTheMessageWhichIsOptional()
         {
@@ -79,6 +82,7 @@ namespace RedCrossWithBDD.StepDefinitions
         }
 
         [Then(@"user added the gift to cart")]
+        [When(@"user added the gift to cart")]
         public void ThenUserAddedTheGiftToCart()
         {
             driver.FindElement(By.XPath("//div[@class='product-form__payment-container']//button")).Click();

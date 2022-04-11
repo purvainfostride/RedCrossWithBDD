@@ -16,14 +16,15 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             driver.FindElement(By.XPath("((//nav[@class='nav-bar']//li)[12]//a)[1]")).Click();
         }
-     
 
-        [Then(@"user selected greeting cards catagory to shop")]
+
+        [When(@"user selected greeting cards catagory to shop")]
         [Given(@"user selected greeting cards catagory to shop")]
         public void ThenUserSelectedGreetingCardsCatagoryToShop()
         {
             driver.FindElement(By.XPath("((//nav[@class='nav-bar']//li)[12]//li)[2]//a")).Click();
         }
+
 
         [Then(@"user is on greeting cards page")]
         [When(@"user is on greeting cards page")]
@@ -33,10 +34,10 @@ namespace RedCrossWithBDD.StepDefinitions
             Assert.AreEqual(stationaryGreetingsPage, driver.Url);
         }
 
-        [Then(@"user selected Birthday cards catagory to shop")]
+        [When(@"user selected Birthday cards catagory to shop")]
         public void ThenUserSelectedBirthdayCardsCatagoryToShop()
         {
-            driver.FindElement(By.XPath("(//nav[@class='nav-bar']//li)[15]//a")).Click();
+            driver.FindElement(By.PartialLinkText("Birthday")).Click();
         }
 
         [Then(@"user is on Birthday cards page")]
@@ -44,11 +45,11 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             Assert.AreEqual(stationaryBirthdayCardPage, driver.Url);
         }
-        
-        [Then(@"user selected Congratulations cards catagory to shop")]
+
+        [When(@"user selected Congratulations cards catagory to shop")]
         public void ThenUserSelectedCongratulationsCardsCatagoryToShop()
         {
-            driver.FindElement(By.XPath("(//nav[@class='nav-bar']//li)[16]//a")).Click();
+            driver.FindElement(By.PartialLinkText("Congratulations")).Click();
         }
 
         [Then(@"user is on Congratulations cards page")]
@@ -57,10 +58,10 @@ namespace RedCrossWithBDD.StepDefinitions
             Assert.AreEqual(stationaryCongratulationsCardPage, driver.Url);
         }
 
-        [Then(@"user selected Thankyou cards catagory to shop")]
+        [When(@"user selected Thankyou cards catagory to shop")]
         public void ThenUserSelectedThankyouCardsCatagoryToShop()
         {
-            driver.FindElement(By.XPath("(//nav[@class='nav-bar']//li)[17]//a")).Click();
+            driver.FindElement(By.PartialLinkText("Thank")).Click();
         }
 
         [Then(@"user is on Thankyou cards page")]
@@ -69,10 +70,10 @@ namespace RedCrossWithBDD.StepDefinitions
             Assert.AreEqual(stationaryThankyouCardPage, driver.Url);
         }
 
-        [Then(@"user selected Wrapping paper catagory to shop")]
+        [When(@"user selected Wrapping paper catagory to shop")]
         public void ThenUserSelectedWrappingPaperCatagoryToShop()
         {
-            driver.FindElement(By.XPath("(//nav[@class='nav-bar']//li)[18]//a")).Click();
+            driver.FindElement(By.PartialLinkText("Wrapping")).Click();
         }
 
         [Then(@"user is on Wrapping paper page")]
@@ -80,10 +81,10 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             Assert.AreEqual(stationaryWrappingPaperPage, driver.Url);
         }
-        [Then(@"user selected Notebooks catagory to shop")]
+        [When(@"user selected Notebooks catagory to shop")]
         public void ThenUserSelectedNotebooksCatagoryToShop()
         {
-            driver.FindElement(By.XPath("(//nav[@class='nav-bar']//li)[19]//a")).Click();
+            driver.FindElement(By.PartialLinkText("Notebooks")).Click();
         }
 
         [Then(@"user is on Notebooks page")]
@@ -92,10 +93,10 @@ namespace RedCrossWithBDD.StepDefinitions
             Assert.AreEqual(stationaryNotebooksPage, driver.Url);
         }
 
-        [Then(@"user selected Enamel Pin Badges catagory to shop")]
+        [When(@"user selected Enamel Pin Badges catagory to shop")]
         public void ThenUserSelectedEnamelPinBadgesCatagoryToShop()
         {
-            driver.FindElement(By.XPath("(//nav[@class='nav-bar']//li)[20]//a")).Click();
+            driver.FindElement(By.PartialLinkText("Enamel")).Click();
         }
 
         [Then(@"user is on Enamel Pin Badges page")]
@@ -123,8 +124,6 @@ namespace RedCrossWithBDD.StepDefinitions
             IWebElement filter = driver.FindElement(By.XPath("//div[@class='product-item product-item--vertical  1/3--tablet-and-up 1/3--desk']"));
             Console.WriteLine(filter.Size.ToString());
         }
-        //(//button[@class='value-picker__choice-item link '])[2]
-        //(//button[@class='value-picker__choice-item link '])[3]
 
         [When(@"user selected BestSelling filter")]
         public void WhenUserSelectedBestSellingFilter()
@@ -139,7 +138,7 @@ namespace RedCrossWithBDD.StepDefinitions
             driver.FindElement(By.XPath("//div[@class='product-item__info-inner']//a[contains(text(),'Bees Knees - Enamel Pin Card')]")).Click();
         }
 
-        [Then(@"page filtered with items  Alphabetically A-Z")]
+        [Then(@"page filtered with items Alphabetically A-Z")]
         public void ThenPageFilteredWithItemsAlphabeticallyA_Z()
         {
             throw new PendingStepException();

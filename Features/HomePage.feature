@@ -46,7 +46,7 @@ Scenario: To validate the menu bar buttons functionality
 	When user clicked on New In menu button
 	Then user is redirected to New Arrivals page
 	When user clicked on Virtual Gifts menu button
-	Then user is redirected to Virtual Gifts page
+	Then user is on Virtual Gifts Page
 	When user clicked on Sale menu button
 	Then user is redirected to Sale page
 	And user closed the browser

@@ -5,7 +5,7 @@ Scenario: To Validate whether Virtual Gifts menu button directing user to virtua
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	When user clicked on Virtual Gifts menu button
-	Then user is redirected to Virtual Gifts page
+	Then user is on Virtual Gifts Page
 	And user closed the browser
 
 @VirtualPage
@@ -13,7 +13,7 @@ Scenario: To Validate whether user is able to select virtual gifts to send
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on Virtual Gifts menu button
-	When user is redirected to Virtual Gifts page
+	When user is on Virtual Gifts Page
 	Then user clicked on the gift to be selected
 	And user closed the browser
 
@@ -22,7 +22,7 @@ Scenario: To Validate whether user is able to Add Virtual gift to cart with Gree
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on Virtual Gifts menu button
-	When user is redirected to Virtual Gifts page
+	When user is on Virtual Gifts Page
 	And user clicked on the gift to be selected
 	Then user selected a greeting card
 	And user entered the Message
@@ -34,7 +34,7 @@ Scenario: To Validate whether user is able to Add Virtual gift to cart with Ecar
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on Virtual Gifts menu button
-	When user is redirected to Virtual Gifts page
+	When user is on Virtual Gifts Page
 	And user clicked on the gift to be selected
 	Then user selected an Ecard
 	And user entered Recipient's Name
@@ -49,7 +49,7 @@ Scenario: To Validate whether user is able to Add Virtual gift to cart without a
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on Virtual Gifts menu button
-	When user is redirected to Virtual Gifts page
+	When user is on Virtual Gifts Page
 	And user clicked on the gift to be selected
 	Then user haven't selected a card
 	And user entered the Message which is optional
