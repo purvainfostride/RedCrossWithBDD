@@ -110,6 +110,7 @@ namespace RedCrossWithBDD.StepDefinitions
             Assert.AreEqual(newInPageUrl, driver.Url);
         }
 
+
         [When(@"user clicked on Virtual Gifts menu button")]
         [Given(@"user clicked on Virtual Gifts menu button")]
         [Then(@"user is on Virtual Gifts Page")]
