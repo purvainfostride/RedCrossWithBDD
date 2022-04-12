@@ -81,22 +81,22 @@ namespace RedCrossWithBDD.Pages
 
         public void UserClickedOnShopeHomeMenuButton()
         {
-            driver.FindElement(By.PartialLinkText("Shop Home")).Click();
+            driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Shop Home')]")).Click();
         }
 
 
         public void UserClickedOnNewInMenuButton()
         {
-            driver.FindElement(By.PartialLinkText("New In")).Click();
+            driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'New In ')]")).Click();
         }
 
         public void UserClickedOnVirtualGiftsMenuButton()
         {
-            driver.FindElement(By.PartialLinkText("Virtual Gifts")).Click();
+            driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Virtual Gifts')]")).Click();
         }
         public void UserClickedOnSaleMenuButton()
         {
-            driver.FindElement(By.PartialLinkText("Sale")).Click();
+            driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Sale')]")).Click();
         }
 
         public void UserClosedTheBrowser()

@@ -39,14 +39,24 @@ Scenario: To validate whether the user is able to login with valid credentials
 
 @HomePage
 Scenario: To validate the menu bar buttons functionality
+@HomePage
+Scenario: To validate the menu bar buttons functionality
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	When user clicked on Shope Home menu button
 	Then user is on Shope Home page of the application
-	When user clicked on New In menu button
-	Then user is redirected to New Arrivals page
-	When user clicked on Virtual Gifts menu button
-	Then user is on Virtual Gifts Page
-	When user clicked on Sale menu button
-	Then user is redirected to Sale page
+	And user clicked on New In menu button
+	And user is redirected to New Arrivals page
+	And user clicked on Clothing menu button
+	And user is redirected to Clothing page
+	And user clicked on Stationary menu button
+	And user is on Stationary Page
+	And user clicked on Homeware menu button
+	And user is on Homeware Page
+	And user clicked on Beauty menu button
+	 And user is on Beauty Page
+	And user clicked on Virtual Gifts menu button
+	And user is on Virtual Gifts Page
+	And user clicked on Sale menu button
+	And user is redirected to Sale page
 	And user closed the browser
