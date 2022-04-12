@@ -10,6 +10,7 @@ namespace RedCrossWithBDD.StepDefinitions
         StationaryModule stationaryModule = new StationaryModule();
         [When(@"user clicked on Stationary menu button")]
         [Given(@"user clicked on Stationary menu button")]
+        [Then(@"user clicked on Stationary menu button")]
         public void WhenUserClickedOnStationaryMenuButton()
         {
             stationaryModule.UserClickedOnStationaryMenuButton();

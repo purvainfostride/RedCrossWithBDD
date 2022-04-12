@@ -1,5 +1,6 @@
 using RedCrossWithBDD.Pages;
 using NUnit.Framework;
+using OpenQA.Selenium;
 
 namespace RedCrossWithBDD.StepDefinitions
 {
@@ -100,6 +101,7 @@ namespace RedCrossWithBDD.StepDefinitions
         }
 
         [When(@"user clicked on New In menu button")]
+        [Then(@"user clicked on New In menu button")]
 
         [Then(@"user is redirected to New Arrivals page")]
         public void ThenUserIsRedirectedToNewArrivalsPage()
@@ -113,7 +115,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"user is on Virtual Gifts Page")]
         [Given(@"user is on Virtual Gifts Page")]
         [When(@"user is on Virtual Gifts Page")]
-
+        [Then(@"user clicked on Virtual Gifts menu button")]
         public void ThenUserIsRedirectedToVirtualGiftsPage()
         {
             homePage.UserClickedOnVirtualGiftsMenuButton();
@@ -121,7 +123,7 @@ namespace RedCrossWithBDD.StepDefinitions
         }
 
         [When(@"user clicked on Sale menu button")]
-
+        [Then(@"user clicked on Sale menu button")]
         [Then(@"user is redirected to Sale page")]
         public void ThenUserIsRedirectedToSalePage()
         {
@@ -134,6 +136,27 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             homePage.UserClosedTheBrowser();
             
+        }
+
+
+        [Then(@"user clicked on Clothing menu button")]
+        public void ThenUserClickedOnClothingMenuButton()
+        {
+            driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Clothing')]")).Click();
+        }
+
+
+        [Then(@"user clicked on Homeware menu button")]
+        public void ThenUserClickedOnHomewareMenuButton()
+        {
+            driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Homeware')]")).Click();
+        }
+
+
+        [Then(@"user clicked on Beauty menu button")]
+        public void ThenUserClickedOnBeautyMenuButton()
+        {
+            driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Beauty')]")).Click();
         }
 
     }
