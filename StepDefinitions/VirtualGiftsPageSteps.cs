@@ -27,7 +27,7 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             virtualGiftsPage.UserHaventSelectedACard();
         }
-        
+
         [Then(@"user selected an Ecard")]
         public void ThenUserSelectedAnEcard()
         {
@@ -76,6 +76,35 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             virtualGiftsPage.UserAddedTheGiftToCart();
         }
+        [When(@"user selected keeping in touch")]
+        [Then(@"user selected keeping in touch")]
+        public void ThenUserSelectedKeepingInTouch()
+        {
+            virtualGiftsPage.UserSelectedKeepingInTouch();
+        }
+        [Then(@"user checkout the product from cart")]
+        public void ThenUserCheckoutTheProductFromCart()
+        {
+            virtualGiftsPage.UserCheckoutTheProductFromCart();
+        }
+        [Then(@"user selected another gift from suggestions")]
+        public void ThenUserSelectedAnotherGiftFromSuggestions()
+        {
+            virtualGiftsPage.UserSelectedAnotherGiftFromSuggestions();
+        }
+
+        [Then(@"user entered personal details")]
+        public void ThenUserEnteredPersonalDetails()
+        {
+            virtualGiftsPage.UserEnteredPersonalDetails();
+        }
+        [Then(@"user continued the payment process")]
+        public void ThenUserContinuedThePaymentProcess()
+        {
+            virtualGiftsPage.UserContinuedThePaymentProcess();
+        }
+
+
         //[Then(@"user checkout the product from cart")]
         //public void ThenUserCheckoutTheProductFromCart()
         //{
