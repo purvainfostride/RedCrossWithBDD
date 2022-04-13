@@ -3,7 +3,7 @@
 A short summary of the feature
 
 @NewInPage
-Scenario: To validate if New Arrival's Product count is same as displayed
+Scenario: To validate if New Arrival's Page Products are equal in total as displayed
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	When user clicked on New In menu button
@@ -21,7 +21,7 @@ Scenario: To validate if New Arrival's Products are clickable
 	And user closed the browser
 
 @NewInPage
-Scenario: To validate user is able to redirect to next pages with numbers
+Scenario: To validate user is able to redirect to next pages by digit buttons
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	When user clicked on New In menu button
@@ -30,7 +30,7 @@ Scenario: To validate user is able to redirect to next pages with numbers
 	And user closed the browser
 
 @NewInPage
-Scenario: To validate user is able to redirect to next pages
+Scenario: To validate user is able to redirect to next pages by next button
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	When user clicked on New In menu button
@@ -39,7 +39,7 @@ Scenario: To validate user is able to redirect to next pages
 	And user closed the browser
 
 @NewInPage
-Scenario: To validate user is able to redirect to previous pages
+Scenario: To validate user is able to redirect to previous pages by previous button
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	When user clicked on New In menu button

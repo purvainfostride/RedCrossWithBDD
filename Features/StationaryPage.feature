@@ -21,6 +21,14 @@ Scenario: To Validate Stationary drop down options
 	Then user is on Enamel Pin Badges page
 	And user closed the browser
 
+@StationaryPage
+Scenario: To validate if greeting cards Page Products are equal in total as displayed
+	Given user is on Landing page of the application
+	And user managed the cookies 
+	When user clicked on Stationary menu button
+	And user selected greeting cards catagory to shop
+	Then greeting cards page Products count is same as displayed
+	And user closed the browser
 
 @GreetingcardsPage
 Scenario: To Validate Display filter sort items 24 per page

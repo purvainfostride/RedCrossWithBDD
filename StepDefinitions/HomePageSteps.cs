@@ -8,7 +8,7 @@ namespace RedCrossWithBDD.StepDefinitions
     public class HomePageSteps:BasePage
     {
         HomePage homePage = new HomePage();
-
+        private string menu = "//li[@class='nav-bar__item']";
         [Given(@"user initialized the browser")]
         [When(@"user navigated to the Application")]
         [Then(@"user is on Landing page of the application")]
@@ -158,6 +158,19 @@ namespace RedCrossWithBDD.StepDefinitions
         public void ThenUserClickedOnBeautyMenuButton()
         {
             driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Beauty')]")).Click();
+        }
+        [When(@"user clicked on menu buttons")]
+        public void WhenUserClickedOnMenuButtons()
+        {
+            var newinpageProducts = driver.FindElements(By.XPath(menu));
+            for (int i = 1; i <= newinpageProducts.Count; i++)
+            {
+                IWebElement menuBar = driver.FindElement(By.XPath("(" + menu + ")" + "[" + i + "]"));
+                menuBar.Click();
+                //Assert.AreEqual(expected, d.Text);
+                //driver.Navigate().Back();
+                Thread.Sleep(1000);
+            }
         }
 
     }

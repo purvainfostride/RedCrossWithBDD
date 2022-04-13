@@ -11,37 +11,30 @@ namespace RedCrossWithBDD.StepDefinitions
     {
         public string newinpageProductsXpath = "//div[@class='product-list product-list--collection product-list--with-sidebar']//a[@class='product-item__title text--strong link']";
         public string nextpageByNumbersXPath = "//div[@class='pagination__nav']//a";
-        public string nextbuttonXpath = "(//div[@class='pagination__inner']//a[@title='Next'])";
+        public string nextbuttonXpath = "//div[@class='pagination__inner']//a[@title='Next']";
         public string prevbuttonXpath = "//div[@class='pagination__inner']//a[@title='Previous']";
         public string pagesUrl = "https://giftshop.redcross.org.uk/collections/new-in?page=";
 
         [Then(@"New Arrival's Product count is same as displayed")]
         public void ThenNewArrivalsProductCountIsSameAsDisplayed()
         {
-            var newinpageProduct1 = driver.FindElements(By.XPath(newinpageProductsXpath));
-            var p1 = newinpageProduct1.Count;
-            Console.WriteLine(newinpageProduct1.Count);
-            driver.FindElement(By.XPath(nextbuttonXpath)).Click();
-            Thread.Sleep(2000);
-            var newinpageProduct2 = driver.FindElements(By.XPath(newinpageProductsXpath));
-            var p2 = newinpageProduct2.Count;
-            Console.WriteLine(newinpageProduct2.Count);
-            driver.FindElement(By.XPath(nextbuttonXpath)).Click();
-            Thread.Sleep(2000);
-            var newinpageProduct3 = driver.FindElements(By.XPath(newinpageProductsXpath));
-            var p3 = newinpageProduct3.Count;
-            Console.WriteLine(newinpageProduct3.Count);
-            var p4 = p1 + p2 + p3;
-            Assert.AreEqual(79, p4);
-            //var newinpageProducts = driver.FindElements(By.XPath(newinpageProductsXpath));
-            //for (int i = 0; i <= 2; i++)
-            //{
+            var count = 0;
+            for (int i = 0; i <= 2; i++)
+            {
+                var newinpageProducts = driver.FindElements(By.XPath(newinpageProductsXpath));
+                var p1 = newinpageProducts.Count;
+                count = count + p1;
 
-            //    Console.WriteLine(newinpageProducts.Count);
-            //    driver.FindElement(By.XPath(nextbuttonXpath)).Click();
-            //    Thread.Sleep(2000);
-            //}
-
+                if (i == 2)
+                {
+                    Assert.AreEqual(79, count);
+                    break;
+                }
+                
+                driver.FindElement(By.XPath(nextbuttonXpath)).Click();
+                Thread.Sleep(2000); 
+            }
+            
         }
         [Then(@"New Arrival's Products are clickable")]
         public void ThenNewArrivalsProductsAreClickable()
@@ -49,10 +42,12 @@ namespace RedCrossWithBDD.StepDefinitions
             var newinpageProducts = driver.FindElements(By.XPath(newinpageProductsXpath));
             for (int i = 1; i <= newinpageProducts.Count; i++)
             {
+                Console.WriteLine(newinpageProducts.Count);
                 IWebElement d = driver.FindElement(By.XPath("(" + newinpageProductsXpath + ")" + "[" + i + "]"));
                 d.Click();
+                //Assert.AreEqual(expected, d.Text);
                 driver.Navigate().Back();
-                Thread.Sleep(5000);
+                Thread.Sleep(3000);
             }
 
         }
@@ -78,6 +73,8 @@ namespace RedCrossWithBDD.StepDefinitions
                 newinpageProducts.Count();
                 driver.FindElement(By.XPath(nextbuttonXpath)).Click();
                 Thread.Sleep(2000);
+                int a = i + 1;
+                Assert.AreEqual(pagesUrl+a, driver.Url);
             }
 
         }
@@ -90,6 +87,7 @@ namespace RedCrossWithBDD.StepDefinitions
                 newinpageProducts.Count();
                 driver.FindElement(By.XPath(prevbuttonXpath)).Click();
                 Thread.Sleep(2000);
+                //ASsert
             }
         }
 

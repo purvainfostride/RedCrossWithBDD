@@ -14,16 +14,17 @@
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="100.0.4896.6000" />
     <PackageReference Include="SeleniumWebDrivers" Version="1.0.0.4" />
     <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
-    <PackageReference Include="SpecFlow.NUnit" Version="3.9.40" />
-    <PackageReference Include="nunit" Version="3.13.2" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.9.69" />
+    <PackageReference Include="nunit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
     <PackageReference Include="FluentAssertions" Version="6.2.0" />
-    <PackageReference Include="WebDriverManager" Version="2.12.3" />
+    <PackageReference Include="WebDriverManager" Version="2.12.4" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Drivers\" />
     <Folder Include="Support\" />
+    <Folder Include="TestData\" />
   </ItemGroup>
 
 </Project>
