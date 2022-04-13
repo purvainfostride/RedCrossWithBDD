@@ -37,3 +37,13 @@ Scenario: To validate user is able to redirect to next pages
 	Then user is redirected to New Arrivals page
 	And user is able to redirect to next pages
 	And user closed the browser
+
+@NewInPage
+Scenario: To validate user is able to redirect to previous pages
+	Given user is on Landing page of the application
+	And user managed the cookies 
+	When user clicked on New In menu button
+	Then user is redirected to New Arrivals page
+	And user is able to redirect to next pages
+	And user is able to redirect to previous pages
+	And user closed the browser
