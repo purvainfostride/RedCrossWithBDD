@@ -135,7 +135,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"user closed the browser")]
         public void ThenUserClosedTheBrowser()
         {
-            homePage.UserClosedTheBrowser();
+           UserClosedTheBrowser();
             
         }
 

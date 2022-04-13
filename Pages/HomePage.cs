@@ -99,11 +99,6 @@ namespace RedCrossWithBDD.Pages
             driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Sale')]")).Click();
         }
 
-        public void UserClosedTheBrowser()
-        {
-            Thread.Sleep(2000);
-            driver.Quit();
-
-        }
+       
     }
 }
