@@ -1,4 +1,5 @@
 using RedCrossWithBDD.Pages;
+using RedCrossWithBDD.Utility;
 using OpenQA.Selenium;
 using NUnit.Framework;
 
@@ -8,6 +9,7 @@ namespace RedCrossWithBDD.StepDefinitions
     public class StationarySteps:BasePage
     {   private  string t="(//div//div[@class='aspect-ratio '])[%s]";
         StationaryModule stationaryModule = new StationaryModule();
+        UtilMethods utilMethods=new UtilMethods();
         [When(@"user clicked on Stationary menu button")]
         [Given(@"user clicked on Stationary menu button")]
         [Then(@"user clicked on Stationary menu button")]
@@ -16,8 +18,9 @@ namespace RedCrossWithBDD.StepDefinitions
             stationaryModule.UserClickedOnStationaryMenuButton();
         }
 
-        [When(@"user selected greeting cards catagory to shop")]
         [Given(@"user selected greeting cards catagory to shop")]
+        [When(@"user selected greeting cards catagory to shop")]
+        [Then(@"user selected greeting cards catagory to shop")]
         public void ThenUserSelectedGreetingCardsCatagoryToShop()
         {
             stationaryModule.UserSelectedGreetingCardsCatagoryToShop();
@@ -31,7 +34,8 @@ namespace RedCrossWithBDD.StepDefinitions
             Assert.AreEqual(stationaryGreetingsPageUrl, driver.Url);
         }
 
-        [When(@"user selected Birthday cards catagory to shop")]
+        [Then(@"user selected Birthday cards catagory to shop")]
+        [When(@"user selected birthday cards catagory to shop")]
         public void ThenUserSelectedBirthdayCardsCatagoryToShop()
         {
             stationaryModule.UserSelectedBirthdayCardsCatagoryToShop();
@@ -43,6 +47,7 @@ namespace RedCrossWithBDD.StepDefinitions
             Assert.AreEqual(stationaryBirthdayCardPage, driver.Url);
         }
 
+        [Then(@"user selected Congratulations cards catagory to shop")]
         [When(@"user selected Congratulations cards catagory to shop")]
         public void ThenUserSelectedCongratulationsCardsCatagoryToShop()
         {
@@ -54,8 +59,8 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             Assert.AreEqual(stationaryCongratulationsCardPage, driver.Url);
         }
-
         [When(@"user selected Thankyou cards catagory to shop")]
+        [Then(@"user selected Thankyou cards catagory to shop")]
         public void ThenUserSelectedThankyouCardsCatagoryToShop()
         {
             stationaryModule.UserSelectedThankyouCardsCatagoryToShop();
@@ -66,8 +71,8 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             Assert.AreEqual(stationaryThankyouCardPage, driver.Url);
         }
-
-        [When(@"user selected Wrapping paper catagory to shop")]
+        [When(@"user selected Wrapping cards catagory to shop")]
+        [Then(@"user selected Wrapping paper catagory to shop")]
         public void ThenUserSelectedWrappingPaperCatagoryToShop()
         {
             stationaryModule.UserSelectedWrappingPaperCatagoryToShop();
@@ -78,7 +83,8 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             Assert.AreEqual(stationaryWrappingPaperPage, driver.Url);
         }
-        [When(@"user selected Notebooks catagory to shop")]
+        [Then(@"user selected Notebooks catagory to shop")]
+        [When(@"user selected Notebooks cards catagory to shop")]
         public void ThenUserSelectedNotebooksCatagoryToShop()
         {
             stationaryModule.UserSelectedNotebooksCatagoryToShop();
@@ -90,6 +96,7 @@ namespace RedCrossWithBDD.StepDefinitions
             Assert.AreEqual(stationaryNotebooksPage, driver.Url);
         }
 
+        [Then(@"user selected Enamel Pin Badges catagory to shop")]
         [When(@"user selected Enamel Pin Badges catagory to shop")]
         public void ThenUserSelectedEnamelPinBadgesCatagoryToShop()
         {
@@ -156,14 +163,59 @@ namespace RedCrossWithBDD.StepDefinitions
             var count = 0;
             var stationarypageProducts = driver.FindElements(By.XPath(AllProductsXpath));
             var p1 = stationarypageProducts.Count;
-                count = count + p1;
+            count = count + p1;
             Assert.AreEqual(38, count);
             driver.FindElement(By.XPath(nextbuttonXpath)).Click();
-                Thread.Sleep(2000);
-            
-        }
-    }
-    
+            Thread.Sleep(2000);
 
-    
+        }
+        [Then(@"birthday cards page Products count is same as displayed")]
+        public void ThenBirthdayCardsPageProductsCountIsSameAsDisplayed()
+        {
+            var stationarypageProducts = driver.FindElements(By.XPath(AllProductsXpath));
+            var p1 = stationarypageProducts.Count;
+            Assert.AreEqual(7, p1);
+        }
+
+        [Then(@"Congratulations cards page Products count is same as displayed")]
+        public void ThenCongratulationsCardsPageProductsCountIsSameAsDisplayed()
+        {
+            var stationarypageProducts = driver.FindElements(By.XPath(AllProductsXpath));
+            var p1 = stationarypageProducts.Count;
+            Assert.AreEqual(4, p1);
+        }
+
+        [Then(@"Thankyou cards page Products count is same as displayed")]
+        public void ThenThankyouCardsPageProductsCountIsSameAsDisplayed()
+        {
+            var stationarypageProducts = driver.FindElements(By.XPath(AllProductsXpath));
+            var p1 = stationarypageProducts.Count;
+            Assert.AreEqual(7, p1);
+        }
+
+        [Then(@"Wrapping cards page Products count is same as displayed")]
+        public void ThenWrappingCardsPageProductsCountIsSameAsDisplayed()
+        {
+            utilMethods.CountAllProducts();
+            //Assert.AreEqual(4);
+        }
+
+        [Then(@"Notebooks cards page Products count is same as displayed")]
+        public void ThenNotebooksCardsPageProductsCountIsSameAsDisplayed()
+        {
+            throw new PendingStepException();
+        }
+
+
+        [Then(@"Enamel Pin Badges page Products count is same as displayed")]
+        public void ThenEnamelPinBadgesPageProductsCountIsSameAsDisplayed()
+        {
+            throw new PendingStepException();
+        }
+
+
+    }
+
+
+
 }

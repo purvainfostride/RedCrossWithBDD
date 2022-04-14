@@ -9,11 +9,14 @@ namespace RedCrossWithBDD.StepDefinitions
     [Binding]
     public class NewInPageStepDefinitions:BasePage
     {
+        HomePage homePage = new HomePage();
         public string newinpageProductsXpath = "//div[@class='product-list product-list--collection product-list--with-sidebar']//a[@class='product-item__title text--strong link']";
         public string nextpageByNumbersXPath = "//div[@class='pagination__nav']//a";
         public string nextbuttonXpath = "//div[@class='pagination__inner']//a[@title='Next']";
         public string prevbuttonXpath = "//div[@class='pagination__inner']//a[@title='Previous']";
         public string pagesUrl = "https://giftshop.redcross.org.uk/collections/new-in?page=";
+        public string displayFilterXpath = "(//div[@class='value-picker__choice-list'])[1]";
+        public string displayFilterButtonXpath = "((//div[@class='value-picker__choice-list'])[1]//button)";
 
         [Then(@"New Arrival's Product count is same as displayed")]
         public void ThenNewArrivalsProductCountIsSameAsDisplayed()
@@ -93,8 +96,37 @@ namespace RedCrossWithBDD.StepDefinitions
 
             }
         }
+        [When(@"user clicked on New In menu button")]
+        [Then(@"user clicked on New In menu button")]
+        [Given(@"user clicked on New In menu button")]
+        [Given(@"user is redirected to New Arrivals page")]
+        [Then(@"user is redirected to New Arrivals page")]
+        public void ThenUserIsRedirectedToNewArrivalsPage()
+        {
+            homePage.UserClickedOnNewInMenuButton();
+            Assert.AreEqual(newInPageUrl, driver.Url);
+        }
 
-
+        [Then(@"Display Filter is Sorting the products by range")]
+        public void ThenDisplayFilterIsSortingTheProductsByRange()
+        {
+            
+            var a = 24;
+            for (int i = 1; i <= 3; i++)
+            {
+                Thread.Sleep(2000);
+                driver.FindElement(By.XPath(displayFilterXpath)).Click();
+                Thread.Sleep(4000);
+                driver.FindElement(By.XPath(displayFilterButtonXpath+"["+i+"]")).Click();
+                var newinpageProducts = driver.FindElements(By.XPath(newinpageProductsXpath));
+                var displayFilterCount= newinpageProducts.Count();
+                Console.WriteLine("before"+a);
+                Assert.AreEqual(a,displayFilterCount);
+                a = a + 12;
+                Console.WriteLine("after"+a);
+                
+            }
+        }
 
     }
 }

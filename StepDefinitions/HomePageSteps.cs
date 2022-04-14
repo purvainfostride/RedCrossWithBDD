@@ -100,16 +100,7 @@ namespace RedCrossWithBDD.StepDefinitions
             Assert.AreEqual(url, driver.Url);
         }
 
-        [When(@"user clicked on New In menu button")]
-        [Then(@"user clicked on New In menu button")]
-
-        [Then(@"user is redirected to New Arrivals page")]
-        public void ThenUserIsRedirectedToNewArrivalsPage()
-        {
-            homePage.UserClickedOnNewInMenuButton();
-            Assert.AreEqual(newInPageUrl, driver.Url);
-        }
-
+        
 
         [When(@"user clicked on Virtual Gifts menu button")]
         [Given(@"user clicked on Virtual Gifts menu button")]
