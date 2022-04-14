@@ -82,13 +82,15 @@ namespace RedCrossWithBDD.StepDefinitions
         public void ThenUserIsAbleToRedirectToPreviousPages()
         {
             var newinpageProducts = driver.FindElements(By.XPath(newinpageProductsXpath));
-            for (int i = 1; i <= 2; i++)
+            var a = 4;
+            for (int i = 1; i <= 2 ; i++)
             {
+                a = a -1;
+                Assert.AreEqual(pagesUrl + a, driver.Url);
                 newinpageProducts.Count();
                 driver.FindElement(By.XPath(prevbuttonXpath)).Click();
                 Thread.Sleep(2000);
-                //int a = i + 1;
-                //Assert.AreEqual(pagesUrl + a, driver.Url);
+
             }
         }
 
