@@ -150,7 +150,19 @@ namespace RedCrossWithBDD.StepDefinitions
         //    }
 
 
+        [Then(@"greeting cards page Products count is same as displayed")]
+        public void ThenGreetingCardsPageProductsCountIsSameAsDisplayed()
+        {
+            var count = 0;
+            var stationarypageProducts = driver.FindElements(By.XPath(AllProductsXpath));
+            var p1 = stationarypageProducts.Count;
+                count = count + p1;
+            Assert.AreEqual(38, count);
+            driver.FindElement(By.XPath(nextbuttonXpath)).Click();
+                Thread.Sleep(2000);
+            
         }
+    }
     
 
     

@@ -60,26 +60,6 @@ namespace RedCrossWithBDD.Pages
             driver.FindElement(By.XPath("//div[@class='product-item__info-inner']//a[contains(text(),'Bees Knees - Enamel Pin Card')]")).Click();
         }
 
-        [Then(@"greeting cards page Products count is same as displayed")]
-        public void ThenGreetingCardsPageProductsCountIsSameAsDisplayed()
-        {
-            var count = 0;
-            for (int i = 1; i <= 2; i++)
-            {
-                var stationarypageProducts = driver.FindElements(By.XPath(AllProductsXpath));
-                var p1 = stationarypageProducts.Count;
-                count = count + p1;
-                Console.WriteLine(count);
-                //if (i == 2)
-                //{
-                //    Assert.AreEqual(79, count);
-                //    break;
-                //}
-
-                driver.FindElement(By.XPath(nextbuttonXpath)).Click();
-                Thread.Sleep(2000);
-            }
-        }
 
 
 

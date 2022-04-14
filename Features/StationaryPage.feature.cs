@@ -152,11 +152,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("To validate if greeting cards Page Products are equal in total as displayed")]
-        [NUnit.Framework.CategoryAttribute("StationaryPage")]
+        [NUnit.Framework.CategoryAttribute("GreetingcardsPage")]
         public void ToValidateIfGreetingCardsPageProductsAreEqualInTotalAsDisplayed()
         {
             string[] tagsOfScenario = new string[] {
-                    "StationaryPage"};
+                    "GreetingcardsPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate if greeting cards Page Products are equal in total as displayed", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 25

@@ -87,7 +87,8 @@ namespace RedCrossWithBDD.StepDefinitions
                 newinpageProducts.Count();
                 driver.FindElement(By.XPath(prevbuttonXpath)).Click();
                 Thread.Sleep(2000);
-                //ASsert
+                //int a = i + 1;
+                //Assert.AreEqual(pagesUrl + a, driver.Url);
             }
         }
 
