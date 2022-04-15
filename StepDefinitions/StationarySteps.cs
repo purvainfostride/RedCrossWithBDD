@@ -111,7 +111,6 @@ namespace RedCrossWithBDD.StepDefinitions
         }
 
         [Then(@"user selected display filter")]
-        [When(@"user selected display filter")]
         public void ThenUserSelectedDisplayFilter()
         {
             stationaryModule.UserSelectedDisplayFilter();

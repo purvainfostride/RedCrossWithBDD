@@ -283,11 +283,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("To validate whether Display Filter is Sorting the products by range")]
-        [NUnit.Framework.CategoryAttribute("GreetingcardsPage")]
+        [NUnit.Framework.CategoryAttribute("NewInPage")]
         public void ToValidateWhetherDisplayFilterIsSortingTheProductsByRange()
         {
             string[] tagsOfScenario = new string[] {
-                    "GreetingcardsPage"};
+                    "NewInPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate whether Display Filter is Sorting the products by range", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 52
@@ -313,10 +313,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("user is redirected to New Arrivals page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 57
- testRunner.When("user selected display filter", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 58
- testRunner.Then("Display Filter is Sorting the products by range", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("user selected display filter to sort the products by range", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             }
             this.ScenarioCleanup();

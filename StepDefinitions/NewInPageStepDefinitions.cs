@@ -8,7 +8,7 @@ using SeleniumExtras.WaitHelpers;
 namespace RedCrossWithBDD.StepDefinitions
 {
     [Binding]
-    public class NewInPageStepDefinitions:LinksUtility
+    public class NewInPageStepDefinitions : LinksUtility
     {
         HomePage homePage = new HomePage();
         public string newinpageProductsXpath = "//div[@class='product-list product-list--collection product-list--with-sidebar']//a[@class='product-item__title text--strong link']";
@@ -16,8 +16,8 @@ namespace RedCrossWithBDD.StepDefinitions
         public string nextbuttonXpath = "//div[@class='pagination__inner']//a[@title='Next']";
         public string prevbuttonXpath = "//div[@class='pagination__inner']//a[@title='Previous']";
         public string pagesUrl = "https://giftshop.redcross.org.uk/collections/new-in?page=";
-        public string displayFilterXpath = "(//div[@class='value-picker__choice-list'])[1]";
-        public string displayFilterButtonXpath = "((//div[@class='value-picker__choice-list'])[1]//button)";
+        public string displayFilterXpath = "((//div[@class='collection__toolbar ']//div[@class='value-picker-wrapper'])//span[@class='hidden-phone'])[1]";
+        public string displayFilterButtonXpath = "((//div[@class='collection__toolbar ']//div[@class='value-picker__choice-list'])//button)";
 
         [Then(@"New Arrival's Product count is same as displayed")]
         public void ThenNewArrivalsProductCountIsSameAsDisplayed()
@@ -34,11 +34,11 @@ namespace RedCrossWithBDD.StepDefinitions
                     Assert.AreEqual(79, count);
                     break;
                 }
-                
+
                 driver.FindElement(By.XPath(nextbuttonXpath)).Click();
-                Thread.Sleep(2000); 
+                Thread.Sleep(2000);
             }
-            
+
         }
         [Then(@"New Arrival's Products are clickable")]
         public void ThenNewArrivalsProductsAreClickable()
@@ -59,13 +59,13 @@ namespace RedCrossWithBDD.StepDefinitions
         public void ThenUserIsAbleToRedirectToNextPagesWithNumbers()
         {
             var nextbynumbers = driver.FindElements(By.XPath(nextpageByNumbersXPath));
-            
+
             for (int i = 1; i <= nextbynumbers.Count; i++)
-            { 
-                IWebElement nextpagebynumbers = driver.FindElement(By.XPath("("+nextpageByNumbersXPath+")" + "[" + i + "]"));
+            {
+                IWebElement nextpagebynumbers = driver.FindElement(By.XPath("(" + nextpageByNumbersXPath + ")" + "[" + i + "]"));
                 nextpagebynumbers.Click();
                 int a = i + 1;
-               Assert.AreEqual(pagesUrl+a, driver.Url);
+                Assert.AreEqual(pagesUrl + a, driver.Url);
             }
         }
         [Then(@"user is able to redirect to next pages")]
@@ -78,7 +78,7 @@ namespace RedCrossWithBDD.StepDefinitions
                 driver.FindElement(By.XPath(nextbuttonXpath)).Click();
                 Thread.Sleep(2000);
                 int a = i + 1;
-                Assert.AreEqual(pagesUrl+a, driver.Url);
+                Assert.AreEqual(pagesUrl + a, driver.Url);
             }
 
         }
@@ -87,9 +87,9 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             var newinpageProducts = driver.FindElements(By.XPath(newinpageProductsXpath));
             var a = 4;
-            for (int i = 1; i <= 2 ; i++)
+            for (int i = 1; i <= 2; i++)
             {
-                a = a -1;
+                a = a - 1;
                 Assert.AreEqual(pagesUrl + a, driver.Url);
                 newinpageProducts.Count();
                 driver.FindElement(By.XPath(prevbuttonXpath)).Click();
@@ -107,27 +107,26 @@ namespace RedCrossWithBDD.StepDefinitions
             homePage.UserClickedOnNewInMenuButton();
             Assert.AreEqual(newInPageUrl, driver.Url);
         }
-
+        [When(@"user selected display filter to sort the products by range")]
         [Then(@"Display Filter is Sorting the products by range")]
-        public void ThenDisplayFilterIsSortingTheProductsByRange()
+        public void WhenUserSelectedDisplayFilter()
         {
-            
             var a = 24;
             for (int i = 1; i <= 3; i++)
             {
-                Thread.Sleep(2000);
+                IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+                js.ExecuteScript("window.scrollBy(0,250);");
                 driver.FindElement(By.XPath(displayFilterXpath)).Click();
-                Thread.Sleep(4000);
-                driver.FindElement(By.XPath(displayFilterButtonXpath+"["+i+"]")).Click();
+                driver.FindElement(By.XPath(displayFilterButtonXpath + "[" + i + "]")).Click();
+                Thread.Sleep(2000);
                 var newinpageProducts = driver.FindElements(By.XPath(newinpageProductsXpath));
-                var displayFilterCount= newinpageProducts.Count();
-                Console.WriteLine("before"+a);
-                Assert.AreEqual(a,displayFilterCount);
+                var displayFilterCount = newinpageProducts.Count();
+                Assert.AreEqual(a, displayFilterCount);
                 a = a + 12;
-                Console.WriteLine("after"+a);
-                
             }
         }
+   
 
     }
 }
+
