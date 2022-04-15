@@ -54,16 +54,14 @@ Scenario: To validate whether Display Filter is Sorting the products by range
 	And user managed the cookies 
 	And user clicked on New In menu button
 	And user is redirected to New Arrivals page
-	When user selected display filter to sort the products by range
-	Then Display Filter is Sorting the products by range
+	Then user validate whether Display Filter is Sorting the products by range
 	And user closed the browser
 
 @NewInPage
-Scenario: To validate whether Sort by Filter is Sorting the products by range
+Scenario:  To validate whether Sort by Filter is Sorting the products by range
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	And user clicked on New In menu button
 	And user is redirected to New Arrivals page
-	When user selected display filter to sort the products by range
-	Then Display Filter is Sorting the products by range
+	Then user validate whether Sort by Filter is Sorting the products by range
 	And user closed the browser

@@ -10,10 +10,11 @@ namespace RedCrossWithBDD.Utility
 {
     public class MethodsUtility:LinksUtility
     {
-        
+        XPathUtility xpathUtility = new XPathUtility();
+
         public void CountAllProducts()
         {   
-            var stationarypageProducts = driver.FindElements(By.XPath(AllProductsXpath));
+            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
             var p1 = stationarypageProducts.Count();
         }
 

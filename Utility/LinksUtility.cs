@@ -26,11 +26,8 @@ namespace RedCrossWithBDD.Utility
         public string virtualGiftsPageUrl = "https://giftshop.redcross.org.uk/collections/virtual-giving";
         public string salePageUrl = "https://giftshop.redcross.org.uk/collections/sale";
         public string cartPageUrl = "https://giftshop.redcross.org.uk/cart";
+        public string pagesUrl = "https://giftshop.redcross.org.uk/collections/new-in?page=";
 
-        public string AllProductsXpath = "//div[@class='product-list product-list--collection product-list--with-sidebar']//a[@class='product-item__title text--strong link']";
-        public string nextpageByNumbersXPath = "//div[@class='pagination__nav']//a";
-        public string nextbuttonXpath = "//div[@class='pagination__inner']//a[@title='Next']";
-        public string prevbuttonXpath = "//div[@class='pagination__inner']//a[@title='Previous']";
 
     }
 }
