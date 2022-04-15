@@ -2,7 +2,7 @@
 
 namespace RedCrossWithBDD.Pages
 {
-    public class BasePage
+    public class LinksUtility
     {
         public static WebDriver driver;
         public string url = "https://giftshop.redcross.org.uk/";

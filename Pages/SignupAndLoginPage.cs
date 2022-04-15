@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 
 namespace RedCrossWithBDD.Pages
 {
-    public class SignupAndLoginPage:BasePage
+    public class SignupAndLoginPage:LinksUtility
     {
         public void UserEnteredValidFirstName()
         {

@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace RedCrossWithBDD.Pages
 {
-    public class StationaryModule:BasePage
+    public class StationaryModule:LinksUtility
     {
         public void UserClickedOnStationaryMenuButton()
         {

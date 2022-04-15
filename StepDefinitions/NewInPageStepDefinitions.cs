@@ -7,7 +7,7 @@ using SeleniumExtras.WaitHelpers;
 namespace RedCrossWithBDD.StepDefinitions
 {
     [Binding]
-    public class NewInPageStepDefinitions:BasePage
+    public class NewInPageStepDefinitions:LinksUtility
     {
         HomePage homePage = new HomePage();
         public string newinpageProductsXpath = "//div[@class='product-list product-list--collection product-list--with-sidebar']//a[@class='product-item__title text--strong link']";

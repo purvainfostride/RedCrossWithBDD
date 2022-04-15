@@ -6,7 +6,7 @@ using RedCrossWithBDD.Pages;
 
 namespace RedCrossWithBDD.Pages
 {
-    public class HomePage : BasePage
+    public class HomePage : LinksUtility
     {
         public void Initialize()
         {

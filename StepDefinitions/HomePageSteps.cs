@@ -5,7 +5,7 @@ using OpenQA.Selenium;
 namespace RedCrossWithBDD.StepDefinitions
 {
     [Binding]
-    public class HomePageSteps:BasePage
+    public class HomePageSteps:LinksUtility
     {
         HomePage homePage = new HomePage();
         private string menu = "//li[@class='nav-bar__item']";

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RedCrossWithBDD.Utility
 {
-    public class UtilMethods:UtilLinks
+    public class MethodsUtility:LinksUtility
     {
         
         public void CountAllProducts()

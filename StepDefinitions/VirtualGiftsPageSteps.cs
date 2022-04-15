@@ -4,7 +4,7 @@ using OpenQA.Selenium;
 namespace RedCrossWithBDD.StepDefinitions
 {
     [Binding]
-    public class VirtualGiftsPageSteps:BasePage
+    public class VirtualGiftsPageSteps:LinksUtility
     {
         VirtualGiftsPage virtualGiftsPage = new VirtualGiftsPage();
 

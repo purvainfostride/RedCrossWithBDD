@@ -4,7 +4,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace RedCrossWithBDD.Pages
 {
-    public class VirtualGiftsPage:BasePage
+    public class VirtualGiftsPage:LinksUtility
     { 
         public void UserClickedOnTheGiftToBeSelected()
         {

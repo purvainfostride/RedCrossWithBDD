@@ -6,10 +6,10 @@ using NUnit.Framework;
 namespace RedCrossWithBDD.StepDefinitions
 {
     [Binding]
-    public class StationarySteps:BasePage
+    public class StationarySteps:LinksUtility
     {   private  string t="(//div//div[@class='aspect-ratio '])[%s]";
         StationaryModule stationaryModule = new StationaryModule();
-        UtilMethods utilMethods=new UtilMethods();
+        MethodsUtility utilMethods=new MethodsUtility();
         [When(@"user clicked on Stationary menu button")]
         [Given(@"user clicked on Stationary menu button")]
         [Then(@"user clicked on Stationary menu button")]

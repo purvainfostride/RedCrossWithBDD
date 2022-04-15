@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RedCrossWithBDD.Utility
 {
-    public class UtilLinks
+    public class LinksUtility
     {
         public static WebDriver driver;
         public string url = "https://giftshop.redcross.org.uk/";
