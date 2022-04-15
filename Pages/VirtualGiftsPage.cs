@@ -86,7 +86,7 @@ namespace RedCrossWithBDD.Pages
         }
         public void UserContinuedThePaymentProcess()
         {
-            driver.FindElement(By.XPath("((//form)[1]//button)[3]/span")).Click();
+            driver.FindElement(By.XPath("//div[@class='step__footer']//button")).Click();
 
         }
     }
