@@ -1,6 +1,7 @@
 using RedCrossWithBDD.Pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using RedCrossWithBDD.Utility;
 
 namespace RedCrossWithBDD.StepDefinitions
 {
@@ -8,6 +9,7 @@ namespace RedCrossWithBDD.StepDefinitions
     public class HomePageSteps:LinksUtility
     {
         HomePage homePage = new HomePage();
+        MethodsUtility methodsUtility = new MethodsUtility();   
         private string menu = "//li[@class='nav-bar__item']";
         [Given(@"user initialized the browser")]
         [When(@"user navigated to the Application")]
@@ -126,7 +128,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"user closed the browser")]
         public void ThenUserClosedTheBrowser()
         {
-           UserClosedTheBrowser();
+            methodsUtility.UserClosedTheBrowser();
             
         }
 

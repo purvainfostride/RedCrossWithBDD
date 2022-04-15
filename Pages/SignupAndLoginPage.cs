@@ -2,6 +2,7 @@
 using System;
 using TechTalk.SpecFlow;
 using OpenQA.Selenium;
+using RedCrossWithBDD.Utility;
 
 namespace RedCrossWithBDD.Pages
 {

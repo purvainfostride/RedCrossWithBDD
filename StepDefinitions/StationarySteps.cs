@@ -2,6 +2,7 @@ using RedCrossWithBDD.Pages;
 using RedCrossWithBDD.Utility;
 using OpenQA.Selenium;
 using NUnit.Framework;
+using RedCrossWithBDD.Utility;
 
 namespace RedCrossWithBDD.StepDefinitions
 {

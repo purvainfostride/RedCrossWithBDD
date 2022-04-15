@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using RedCrossWithBDD.Utility;
 using NUnit.Framework;
 
 namespace RedCrossWithBDD.Pages

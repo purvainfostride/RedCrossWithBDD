@@ -1,5 +1,6 @@
 using RedCrossWithBDD.Pages;
 using OpenQA.Selenium;
+using RedCrossWithBDD.Utility;
 
 namespace RedCrossWithBDD.StepDefinitions
 {
