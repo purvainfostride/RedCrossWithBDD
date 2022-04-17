@@ -21,7 +21,7 @@ namespace RedCrossWithBDD.StepDefinitions
             var count = 0;
             for (int i = 0; i <= 2; i++)
             {
-                var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+                var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
                 var p1 = newinpageProducts.Count;
                 count = count + p1;
 
@@ -39,11 +39,11 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"New Arrival's Products are clickable")]
         public void ThenNewArrivalsProductsAreClickable()
         {
-            var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+            var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
             for (int i = 1; i <= newinpageProducts.Count; i++)
             {
                 Console.WriteLine(newinpageProducts.Count);
-                IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.AllProductsXpath + ")" + "[" + i + "]"));
+                IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + i + "]"));
                 d.Click();
                 //Assert.AreEqual(expected, d.Text);
                 driver.Navigate().Back();
@@ -67,7 +67,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"user is able to redirect to next pages")]
         public void ThenUserIsAbleToRedirectToNextPages()
         {
-            var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+            var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
             for (int i = 1; i <= 2; i++)
             {
                 newinpageProducts.Count();
@@ -81,7 +81,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"user is able to redirect to previous pages")]
         public void ThenUserIsAbleToRedirectToPreviousPages()
         {
-            var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+            var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
             var a = 4;
             for (int i = 1; i <= 2; i++)
             {
@@ -114,7 +114,7 @@ namespace RedCrossWithBDD.StepDefinitions
                 driver.FindElement(By.XPath(xpathUtility.displayFilterXpath)).Click();
                 driver.FindElement(By.XPath(xpathUtility.displayFilterButtonXpath + "[" + i + "]")).Click();
                 Thread.Sleep(2000);
-                var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+                var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
                 var displayFilterCount = newinpageProducts.Count();
                 Assert.AreEqual(a, displayFilterCount);
                 a = a + 12;
@@ -131,10 +131,10 @@ namespace RedCrossWithBDD.StepDefinitions
                 driver.FindElement(By.XPath(xpathUtility.sortbyFilterXpath)).Click();
                 driver.FindElement(By.XPath(xpathUtility.displayFilterButtonXpath + "[" + i + "]")).Click();
                 Thread.Sleep(3000);
-                var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+                var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
                 for (int j = 1; j <= newinpageProducts.Count; j++)
                 {   
-                    IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.AllProductsXpath + ")" + "[" + i + "]"));
+                    IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + i + "]"));
                     Console.WriteLine(i+": "+d.Text);
                 }
             }
@@ -142,7 +142,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"user Validate total price of cart products is same as displayed in total")]
         //public void ThenUserValidateTotalPriceOfCartProductsIsSameAsDisplayedInTotal()
         //{
-        //    driver.FindElement(By.XPath(xpathUtility.AllProductsXpath + "[1]")).Click();
+        //    driver.FindElement(By.XPath(xpathUtility.allProductsXpath + "[1]")).Click();
         //    driver.FindElement(By.XPath("//div[@class='product-form__payment-container']//button")).Click();
         //    string text1 = driver.FindElement(By.XPath(xpathUtility.totalamountXpath + "[2]")).Text;
         //    string t1 = text1.Substring(1);
@@ -152,12 +152,12 @@ namespace RedCrossWithBDD.StepDefinitions
         //}
         public void ThenUserValidateTotalPriceOfCartProductsIsSameAsDisplayedInTotal()
         {
-            var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+            var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
             var amount = "";
             for (int i = 1; i <= newinpageProducts.Count; i++)
             {
                 newinpageProducts.Count();
-                IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.AllProductsXpath + ")" + "[" + i + "]"));
+                IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + i + "]"));
                 d.Click();
                 driver.FindElement(By.XPath("//div[@class='product-form__payment-container']//button")).Click();
                 var totalamount = driver.FindElements(By.XPath(xpathUtility.totalamountXpath));
@@ -195,7 +195,7 @@ namespace RedCrossWithBDD.StepDefinitions
         //{
         //    int i;
         //    driver.Navigate().Back();
-        //    driver.FindElement(By.XPath(xpathUtility.AllProductsXpath + "[2]")).Click();
+        //    driver.FindElement(By.XPath(xpathUtility.allProductsXpath + "[2]")).Click();
         //    var totalamount = driver.FindElements(By.XPath(xpathUtility.totalamountXpath));
         //    for (i = 1; i <= (totalamount.Count / 2); i++)
         //    {

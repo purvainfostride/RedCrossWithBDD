@@ -14,7 +14,7 @@ namespace RedCrossWithBDD.Utility
 
         public void CountAllProducts()
         {   
-            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
             var p1 = stationarypageProducts.Count();
         }
 

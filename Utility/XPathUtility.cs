@@ -8,7 +8,7 @@ namespace RedCrossWithBDD.Utility
 {
     public class XPathUtility
     {
-        public string AllProductsXpath = "(//div[@class='product-list product-list--collection product-list--with-sidebar']//a[@class='product-item__title text--strong link'])";
+        public string allProductsXpath = "(//div[@class='product-list product-list--collection product-list--with-sidebar']//a[@class='product-item__title text--strong link'])";
         public string nextpageByNumbersXPath = "//div[@class='pagination__nav']//a";
         public string nextbuttonXpath = "//div[@class='pagination__inner']//a[@title='Next']";
         public string prevbuttonXpath = "//div[@class='pagination__inner']//a[@title='Previous']";
@@ -18,6 +18,16 @@ namespace RedCrossWithBDD.Utility
         public string sortbyFilterXpath = "((//div[@class='collection__toolbar ']//div[@class='value-picker-wrapper'])//span[@class='hidden-phone'])[2]";
 
         public string totalamountXpath = "(//tbody//span)";
-    
+
+        //menubar
+        public string shopHomeButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Clothing')]";
+        public string newInButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'New In ')]";
+        public string virtualGiftsButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Virtual Gifts')]";
+        public string saleButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Sale')]";
+        public string clothingMenuButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Clothing')]";
+        public string homewareMenuButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Homeware')]";
+        public string beautyMenuButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Beauty')]";
+
+
     }
 }

@@ -162,7 +162,7 @@ namespace RedCrossWithBDD.StepDefinitions
         public void ThenGreetingCardsPageProductsCountIsSameAsDisplayed()
         {
             var count = 0;
-            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
             var p1 = stationarypageProducts.Count;
             count = count + p1;
             Assert.AreEqual(38, count);
@@ -173,7 +173,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"birthday cards page Products count is same as displayed")]
         public void ThenBirthdayCardsPageProductsCountIsSameAsDisplayed()
         {
-            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
             var p1 = stationarypageProducts.Count;
             Assert.AreEqual(7, p1);
         }
@@ -181,7 +181,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"Congratulations cards page Products count is same as displayed")]
         public void ThenCongratulationsCardsPageProductsCountIsSameAsDisplayed()
         {
-            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
             var p1 = stationarypageProducts.Count;
             Assert.AreEqual(4, p1);
         }
@@ -189,7 +189,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"Thankyou cards page Products count is same as displayed")]
         public void ThenThankyouCardsPageProductsCountIsSameAsDisplayed()
         {
-            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.AllProductsXpath));
+            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
             var p1 = stationarypageProducts.Count;
             Assert.AreEqual(7, p1);
         }

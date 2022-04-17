@@ -9,8 +9,11 @@ namespace RedCrossWithBDD.StepDefinitions
     public class HomePageSteps:LinksUtility
     {
         HomePage homePage = new HomePage();
-        MethodsUtility methodsUtility = new MethodsUtility();   
+        MethodsUtility methodsUtility = new MethodsUtility();
+        XPathUtility xpathUtility = new XPathUtility();
+
         private string menu = "//li[@class='nav-bar__item']";
+
         [Given(@"user initialized the browser")]
         [When(@"user navigated to the Application")]
         [Then(@"user is on Landing page of the application")]
@@ -136,21 +139,21 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"user clicked on Clothing menu button")]
         public void ThenUserClickedOnClothingMenuButton()
         {
-            driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Clothing')]")).Click();
+            homePage.UserClickedOnClothingMenuButton();
         }
 
 
         [Then(@"user clicked on Homeware menu button")]
         public void ThenUserClickedOnHomewareMenuButton()
         {
-            driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Homeware')]")).Click();
+            driver.FindElement(By.XPath(xpathUtility.homewareMenuButtonXpath)).Click();
         }
 
 
         [Then(@"user clicked on Beauty menu button")]
         public void ThenUserClickedOnBeautyMenuButton()
         {
-            driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Beauty')]")).Click();
+            driver.FindElement(By.XPath(xpathUtility.beautyMenuButtonXpath)).Click();
         }
         [When(@"user clicked on menu buttons")]
         public void WhenUserClickedOnMenuButtons()
