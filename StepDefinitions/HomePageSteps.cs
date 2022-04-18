@@ -146,7 +146,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"user clicked on Homeware menu button")]
         public void ThenUserClickedOnHomewareMenuButton()
         {
-            driver.FindElement(By.XPath(xpathUtility.homewareMenuButtonXpath)).Click();
+            homePage.UserClickedOnHomewareMenuButton();
         }
 
 

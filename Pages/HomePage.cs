@@ -8,11 +8,10 @@ namespace RedCrossWithBDD.Pages
 {
     public class HomePage : LinksUtility
     {
-        HomePage homePage = new HomePage();
-        MethodsUtility methodsUtility = new MethodsUtility();
+        
         XPathUtility xpathUtility = new XPathUtility();
 
-        By cookiesOk = By.Id("onetrust - accept - btn - handler");
+        By cookiesOk = By.Id("onetrust-accept-btn-handler");
         By myAccount = By.PartialLinkText("account");
         By signupBox = By.XPath("//form[@id='header_customer_login']//following-sibling::div[@class='popover__secondary-action']//button[@class='link link--accented']");
 
@@ -117,6 +116,10 @@ namespace RedCrossWithBDD.Pages
         public void UserClickedOnClothingMenuButton()
         {
             driver.FindElement(By.XPath(xpathUtility.clothingMenuButtonXpath)).Click();
+        }
+        public void UserClickedOnHomewareMenuButton()
+        {
+            driver.FindElement(By.XPath(xpathUtility.homewareMenuButtonXpath)).Click();
         }
 
     }

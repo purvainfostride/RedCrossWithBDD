@@ -123,7 +123,6 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"user validate whether Sort by Filter is Sorting the products by range")]
         public void WhenUserSelectedSortByFilterToSortTheProductsByRange()
         {
-           
             for (int i = 4; i <= 11; i++)
             {
                 IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
@@ -133,11 +132,23 @@ namespace RedCrossWithBDD.StepDefinitions
                 Thread.Sleep(3000);
                 var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
                 for (int j = 1; j <= newinpageProducts.Count; j++)
-                {   
-                    IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + i + "]"));
-                    Console.WriteLine(i+": "+d.Text);
+                {
+                    IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + j + "]"));
+                    Console.WriteLine(j + ": " + d.Text);
                 }
             }
+            //IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            //js.ExecuteScript("window.scrollBy(0,250);");
+            //driver.FindElement(By.XPath(xpathUtility.sortbyFilterXpath)).Click();
+            //driver.FindElement(By.XPath(xpathUtility.displayFilterButtonXpath+"[5]")).Click();
+            //Thread.Sleep(3000);
+            //var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
+            //for (int j = 1; j <= newinpageProducts.Count; j++)
+            //{
+            //    IWebElement d = driver.FindElement(By.XPath("("+ xpathUtility.allProductsXpath +")" + "[" + j + "]"));
+            //    Console.WriteLine(j + ": " + d.Text);
+            //}
+
         }
         [Then(@"user Validate total price of cart products is same as displayed in total")]
         //public void ThenUserValidateTotalPriceOfCartProductsIsSameAsDisplayedInTotal()
