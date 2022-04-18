@@ -31,61 +31,51 @@ Scenario: To validate if greeting cards Page Products are equal in total as disp
 	And user closed the browser
 
 @GreetingcardsPage
-Scenario: To Validate Display filter sort items 24 per page
+Scenario: To validate user is able to redirect to next pages of GreetingcardsPage by digit buttons
 	Given user is on Landing page of the application
 	And user managed the cookies 
-	And user clicked on Stationary menu button
+	When user clicked on Stationary menu button
 	And user selected greeting cards catagory to shop
-	And user is on greeting cards page
-	When user selected display filter
-	Then selected 24 per page
-	And page filtered with items 24 per page
+	Then user is able to redirect to next pages of GreetingcardsPage with numbers
 	And user closed the browser
-
-#@GreetingcardSPage
-#Scenario: To Validate Display filter 36 per page
-#	Given user is on Landing page of the application
-#	And user managed the cookies 
-#	And user clicked on Stationary menu button
-#	And user selected greeting cards catagory to shop
-#	And user is on greeting cards page
-#	When user selected display filter
-#	Then selected 36 per page
-#	And page filtered with items 36 per page
-#	And user closed the browser
-#
-#@GreetingcardSPage
-#Scenario: To Validate Display filter 48 per page
-#	Given user is on Landing page of the application
-#	And user managed the cookies 
-#	And user clicked on Stationary menu button
-#	And user selected greeting cards catagory to shop
-#	And user is on greeting cards page
-#	When user selected display filter
-#	Then selected 48 per page
-#	And page filtered with items 48 per page
-#	And user closed the browser
 
 @GreetingcardsPage
-Scenario: To Validate BestSelling filter sort items Alphabetically A-Z
+Scenario: To validate user is able to redirect to next pages by next button
 	Given user is on Landing page of the application
 	And user managed the cookies 
-	And user clicked on Stationary menu button
-	And user selected greeting cards catagory to shop
-	And user is on greeting cards page
-	When user selected BestSelling filter
-	Then selected Alphabetically A-Z
-	And page filtered with items Alphabetically A-Z
+	When user clicked on Stationary menu button
+	Then user selected greeting cards catagory to shop
+	And user is able to redirect to next pages of GreetingcardsPage
 	And user closed the browser
 
-#@GreetingcardsPage
-#Scenario: To Validate whether user is able to select greeting cards from greeting card page
-#	Given user is on Landing page of the application
-#	And user managed the cookies 
-#	And user clicked on Stationary menu button
-#	And user selected greeting cards catagory to shop
-#	When user is on greeting cards page
-#	Then user select greeting card to send
+@GreetingcardsPage
+Scenario: To validate user is able to redirect to previous pages by previous button
+	Given user is on Landing page of the application
+	And user managed the cookies 
+	When user clicked on Stationary menu button
+	And user selected greeting cards catagory to shop
+	Then user is able to redirect to next pages of GreetingcardsPage
+	And user is able to redirect to previous pages of GreetingcardsPage
+	And user closed the browser
+
+@GreetingcardsPage
+Scenario: To validate whether Display Filter is Sorting the products by range
+	Given user is on Landing page of the application
+	And user managed the cookies 
+	When user clicked on Stationary menu button
+	And user selected greeting cards catagory to shop
+	Then user validate whether Display Filter of greetingsPage is Sorting the products by range
+	And user closed the browser
+
+
+@GreetingcardsPage
+Scenario:  To validate whether Sort by Filter is Sorting the products by range
+	Given user is on Landing page of the application
+	And user managed the cookies 
+	When user clicked on Stationary menu button
+	And user selected greeting cards catagory to shop
+	Then user validate whether Sort by Filter of greetingsPage is Sorting the products by range
+	And user closed the browser
 	
 @birthdaycardsPage
 Scenario: To validate if birthday cards Page Products are equal in total as displayed

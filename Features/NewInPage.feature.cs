@@ -156,14 +156,14 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To validate user is able to redirect to next pages by digit buttons")]
+        [NUnit.Framework.DescriptionAttribute("To validate user is able to redirect to next pages of NewInPage by digit buttons")]
         [NUnit.Framework.CategoryAttribute("NewInPage")]
-        public void ToValidateUserIsAbleToRedirectToNextPagesByDigitButtons()
+        public void ToValidateUserIsAbleToRedirectToNextPagesOfNewInPageByDigitButtons()
         {
             string[] tagsOfScenario = new string[] {
                     "NewInPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate user is able to redirect to next pages by digit buttons", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate user is able to redirect to next pages of NewInPage by digit buttons", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden

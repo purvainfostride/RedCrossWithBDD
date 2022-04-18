@@ -162,12 +162,22 @@ namespace RedCrossWithBDD.StepDefinitions
         public void ThenGreetingCardsPageProductsCountIsSameAsDisplayed()
         {
             var count = 0;
-            var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
-            var p1 = stationarypageProducts.Count;
-            count = count + p1;
-            Assert.AreEqual(38, count);
-            driver.FindElement(By.XPath(xpathUtility.nextbuttonXpath)).Click();
-            Thread.Sleep(2000);
+            
+            for (int i = 1; i <= 2; i++)
+            {
+                var greetingsPageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
+                var p1 = greetingsPageProducts.Count;
+                count = count + p1;
+
+                if (i == 2)
+                {
+                    Assert.AreEqual(38, count);
+                    break;
+                }
+
+                driver.FindElement(By.XPath(xpathUtility.nextbuttonXpath)).Click();
+                Thread.Sleep(2000);
+            }
 
         }
         [Then(@"birthday cards page Products count is same as displayed")]
@@ -213,10 +223,84 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             throw new PendingStepException();
         }
+        [Then(@"user is able to redirect to next pages of GreetingcardsPage with numbers")]
+        public void ThenUserIsAbleToRedirectToNextPagesOfGreetingcardsPageWithNumbers()
+        {
+            var nextbynumbers = driver.FindElements(By.XPath(xpathUtility.nextpageByNumbersXPath));
 
+            for (int i = 1; i <= nextbynumbers.Count; i++)
+            {
+                IWebElement nextpagebynumbers = driver.FindElement(By.XPath("(" + xpathUtility.nextpageByNumbersXPath + ")" + "[" + i + "]"));
+                nextpagebynumbers.Click();
+                int a = i + 1;
+                Assert.AreEqual(greetingsPage + a, driver.Url);
+            }
+        }
+        [Then(@"user is able to redirect to next pages of GreetingcardsPage")]
+        public void ThenUserIsAbleToRedirectToNextPagesOfGreetingcardsPage()
+        {
+            var greetingsPageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
+            greetingsPageProducts.Count();
+            driver.FindElement(By.XPath(xpathUtility.nextbuttonXpath)).Click();
+            Thread.Sleep(2000);
+            int a = 2;
+            Assert.AreEqual(greetingsPage + a, driver.Url);
+            
+        }
+
+        [Then(@"user is able to redirect to previous pages of GreetingcardsPage")]
+        public void ThenUserIsAbleToRedirectToPreviousPagesOfGreetingcardsPage()
+        {
+            var greetingsPageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
+            greetingsPageProducts.Count();
+            driver.FindElement(By.XPath(xpathUtility.prevbuttonXpath)).Click();
+            Thread.Sleep(2000);
+            int a = 1;
+            Assert.AreEqual(greetingsPage + a, driver.Url);
+
+        }
+        [Then(@"user validate whether Display Filter of greetingsPage is Sorting the products by range")]
+        public void ThenUserValidateWhetherDisplayFilterOfGreetingsPageIsSortingTheProductsByRange()
+        {
+            var a = 24;
+            for (int i = 1; i <= 3; i++)
+            {
+                IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+                js.ExecuteScript("window.scrollBy(0,250);");
+                driver.FindElement(By.XPath(xpathUtility.displayFilterGreetingXpath)).Click();
+                driver.FindElement(By.XPath(xpathUtility.displayFilterButtonGreetingXpath + "[" + i + "]")).Click();
+                Thread.Sleep(2000);
+                var greetingsPageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
+                var displayFilterCount = greetingsPageProducts.Count();
+                Assert.AreEqual(a, displayFilterCount);
+                a = a + 12;
+            }
+        }
+
+        [Then(@"user validate whether Sort by Filter of greetingsPage is Sorting the products by range")]
+        public void ThenUserValidateWhetherSortByFilterOfGreetingsPageIsSortingTheProductsByRange()
+        {
+            for (int i = 4; i <= 11; i++)
+            {
+                IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+                js.ExecuteScript("window.scrollBy(0,300);");
+                driver.FindElement(By.XPath(xpathUtility.displayFilterGreetingXpath)).Click();
+                driver.FindElement(By.XPath(xpathUtility.displayFilterButtonGreetingXpath + "[" + i + "]")).Click();
+                Thread.Sleep(3000);
+                var greetingsPageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
+                for (int j = 1; j <= greetingsPageProducts.Count; j++)
+                {
+                    IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + j + "]"));
+                    Console.WriteLine(j + ": " + d.Text);
+                }
+            }
+        }
 
     }
 
 
-
 }
+
+
+
+

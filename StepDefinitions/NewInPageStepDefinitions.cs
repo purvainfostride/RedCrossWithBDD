@@ -6,6 +6,9 @@ using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 using System.Text;
 using System.Text.RegularExpressions;
+using NPOI.Util;
+using NPOI.HSSF.UserModel;
+using NPOI.SS.UserModel;
 
 namespace RedCrossWithBDD.StepDefinitions
 {
@@ -13,8 +16,9 @@ namespace RedCrossWithBDD.StepDefinitions
     public class NewInPageStepDefinitions : LinksUtility
     {
         HomePage homePage = new HomePage();
-        XPathUtility xpathUtility= new XPathUtility();
-        
+        XPathUtility xpathUtility = new XPathUtility();
+
+
         [Then(@"New Arrival's Product count is same as displayed")]
         public void ThenNewArrivalsProductCountIsSameAsDisplayed()
         {
@@ -52,6 +56,7 @@ namespace RedCrossWithBDD.StepDefinitions
 
         }
         [Then(@"user is able to redirect to next pages with numbers")]
+    
         public void ThenUserIsAbleToRedirectToNextPagesWithNumbers()
         {
             var nextbynumbers = driver.FindElements(By.XPath(xpathUtility.nextpageByNumbersXPath));
@@ -61,7 +66,7 @@ namespace RedCrossWithBDD.StepDefinitions
                 IWebElement nextpagebynumbers = driver.FindElement(By.XPath("(" + xpathUtility.nextpageByNumbersXPath + ")" + "[" + i + "]"));
                 nextpagebynumbers.Click();
                 int a = i + 1;
-                Assert.AreEqual(pagesUrl + a, driver.Url);
+                Assert.AreEqual(newInPagesUrl + a, driver.Url);
             }
         }
         [Then(@"user is able to redirect to next pages")]
@@ -74,7 +79,7 @@ namespace RedCrossWithBDD.StepDefinitions
                 driver.FindElement(By.XPath(xpathUtility.nextbuttonXpath)).Click();
                 Thread.Sleep(2000);
                 int a = i + 1;
-                Assert.AreEqual(pagesUrl + a, driver.Url);
+                Assert.AreEqual(newInPagesUrl + a, driver.Url);
             }
 
         }
@@ -86,7 +91,7 @@ namespace RedCrossWithBDD.StepDefinitions
             for (int i = 1; i <= 2; i++)
             {
                 a = a - 1;
-                Assert.AreEqual(pagesUrl + a, driver.Url);
+                Assert.AreEqual(newInPagesUrl + a, driver.Url);
                 newinpageProducts.Count();
                 driver.FindElement(By.XPath(xpathUtility.prevbuttonXpath)).Click();
                 Thread.Sleep(2000);
@@ -126,7 +131,7 @@ namespace RedCrossWithBDD.StepDefinitions
             for (int i = 4; i <= 11; i++)
             {
                 IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-                js.ExecuteScript("window.scrollBy(0,250);");
+                js.ExecuteScript("window.scrollBy(0,400);");
                 driver.FindElement(By.XPath(xpathUtility.sortbyFilterXpath)).Click();
                 driver.FindElement(By.XPath(xpathUtility.displayFilterButtonXpath + "[" + i + "]")).Click();
                 Thread.Sleep(3000);
@@ -137,83 +142,89 @@ namespace RedCrossWithBDD.StepDefinitions
                     Console.WriteLine(j + ": " + d.Text);
                 }
             }
-            //IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            //js.ExecuteScript("window.scrollBy(0,250);");
-            //driver.FindElement(By.XPath(xpathUtility.sortbyFilterXpath)).Click();
-            //driver.FindElement(By.XPath(xpathUtility.displayFilterButtonXpath+"[5]")).Click();
-            //Thread.Sleep(3000);
-            //var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
-            //for (int j = 1; j <= newinpageProducts.Count; j++)
+            //string path = @"C:\\Users\\Purva\\C#\\RedCrossWithBDD\\TestData\\NewInPageData.xls";
+            //FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+            //HSSFWorkbook wb = new HSSFWorkbook(fs);
+            //ISheet sheet = wb.GetSheetAt(0);
+            //if (sheet != null)
             //{
-            //    IWebElement d = driver.FindElement(By.XPath("("+ xpathUtility.allProductsXpath +")" + "[" + j + "]"));
-            //    Console.WriteLine(j + ": " + d.Text);
+            //    int rowCount = sheet.LastRowNum;
+            //    Console.WriteLine(rowCount);
+            //    for (int i = 0; i < rowCount; i++)
+            //    {
+            //        IRow curRow = sheet.GetRow(i);
+            //        var cellvalue0 = curRow.GetCell(0).StringCellValue.Trim();
+            //        Console.WriteLine(cellvalue0);
+            //    }
+
             //}
-
         }
-        [Then(@"user Validate total price of cart products is same as displayed in total")]
-        //public void ThenUserValidateTotalPriceOfCartProductsIsSameAsDisplayedInTotal()
-        //{
-        //    driver.FindElement(By.XPath(xpathUtility.allProductsXpath + "[1]")).Click();
-        //    driver.FindElement(By.XPath("//div[@class='product-form__payment-container']//button")).Click();
-        //    string text1 = driver.FindElement(By.XPath(xpathUtility.totalamountXpath + "[2]")).Text;
-        //    string t1 = text1.Substring(1);
-        //    string text2 = driver.FindElement(By.XPath("(//div[@class='cart-recap__price-line text--pull']//span)[2]")).Text;
-        //    string t2 = text2.Substring(1); 
-        //    Assert.AreEqual(t1, t2);  
-        //}
-        public void ThenUserValidateTotalPriceOfCartProductsIsSameAsDisplayedInTotal()
-        {
-            var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
-            var amount = "";
-            for (int i = 1; i <= newinpageProducts.Count; i++)
-            {
-                newinpageProducts.Count();
-                IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + i + "]"));
-                d.Click();
-                driver.FindElement(By.XPath("//div[@class='product-form__payment-container']//button")).Click();
-                var totalamount = driver.FindElements(By.XPath(xpathUtility.totalamountXpath));
-                for (i=1; i <= (totalamount.Count / 2); i++)
-                {
-                    string text1 = driver.FindElement(By.XPath(xpathUtility.totalamountXpath + "[" + (i * 2) + "]")).Text;
-                    string t1 = text1.Substring(1);
-                    Console.WriteLine("total: "+t1);
-                    amount =amount.Trim()+ t1;
 
-                    float p2 = (float)Convert.ToDouble(amount) + (float)Convert.ToDouble(t1);
-                    Console.WriteLine("tootal: "+ amount);
-                    Console.WriteLine("tootalp2: " + p2);
-                    if (i==((totalamount.Count/2)+1)){
-                  
-                        
-                        
-                        break;
+            [Then(@"user Validate total price of cart products is same as displayed in total")]
+                //public void ThenUserValidateTotalPriceOfCartProductsIsSameAsDisplayedInTotal()
+                //{
+                //    driver.FindElement(By.XPath(xpathUtility.allProductsXpath + "[1]")).Click();
+                //    driver.FindElement(By.XPath("//div[@class='product-form__payment-container']//button")).Click();
+                //    string text1 = driver.FindElement(By.XPath(xpathUtility.totalamountXpath + "[2]")).Text;
+                //    string t1 = text1.Substring(1);
+                //    string text2 = driver.FindElement(By.XPath("(//div[@class='cart-recap__price-line text--pull']//span)[2]")).Text;
+                //    string t2 = text2.Substring(1); 
+                //    Assert.AreEqual(t1, t2);  
+                //}
+                public void ThenUserValidateTotalPriceOfCartProductsIsSameAsDisplayedInTotal()
+                {
+                    var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
+                    var amount = "";
+                    for (int i = 1; i <= newinpageProducts.Count; i++)
+                    {
+                        newinpageProducts.Count();
+                        IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + i + "]"));
+                        d.Click();
+                        driver.FindElement(By.XPath("//div[@class='product-form__payment-container']//button")).Click();
+                        var totalamount = driver.FindElements(By.XPath(xpathUtility.totalamountXpath));
+                        for (i = 1; i <= (totalamount.Count / 2); i++)
+                        {
+                            string text1 = driver.FindElement(By.XPath(xpathUtility.totalamountXpath + "[" + (i * 2) + "]")).Text;
+                            string t1 = text1.Substring(1);
+                            Console.WriteLine("total: " + t1);
+                            amount = amount.Trim() + t1;
+
+                            float p2 = (float)Convert.ToDouble(amount) + (float)Convert.ToDouble(t1);
+                            Console.WriteLine("tootal: " + amount);
+                            Console.WriteLine("tootalp2: " + p2);
+                            if (i == ((totalamount.Count / 2) + 1)) {
+
+
+
+                                break;
+                            }
+                            string text2 = driver.FindElement(By.XPath("(//div[@class='cart-recap__price-line text--pull']//span)[2]")).Text;
+                            string t2 = text2.Substring(1);
+                            Console.WriteLine("Total: " + t2);
+                            //Assert.AreEqual(t2, p2);
+                            driver.Navigate().Back();
+                            driver.Navigate().Back();
+                            Thread.Sleep(2000);
+                        }
+
                     }
-                    string text2 = driver.FindElement(By.XPath("(//div[@class='cart-recap__price-line text--pull']//span)[2]")).Text;
-                    string t2 = text2.Substring(1);
-                    Console.WriteLine("Total: " + t2);
-                    //Assert.AreEqual(t2, p2);
-                    driver.Navigate().Back();
-                    driver.Navigate().Back();
-                    Thread.Sleep(2000);
                 }
-                
+
+
+                //[When(@"user Validate total price of cart products is same as displayed in total")]
+                //public void GivenUserValidateTotalPriceOfCartProductsIsSameAsDisplayedInTotal()
+                //{
+                //    int i;
+                //    driver.Navigate().Back();
+                //    driver.FindElement(By.XPath(xpathUtility.allProductsXpath + "[2]")).Click();
+                //    var totalamount = driver.FindElements(By.XPath(xpathUtility.totalamountXpath));
+                //    for (i = 1; i <= (totalamount.Count / 2); i++)
+                //    {
+                //        string text = driver.FindElement(By.XPath(xpathUtility.totalamountXpath + "[" + (i * 2) + "]")).Text;
+                //        Console.WriteLine(text);
+                //    }
+                //}
             }
         }
-        
-
-        //[When(@"user Validate total price of cart products is same as displayed in total")]
-        //public void GivenUserValidateTotalPriceOfCartProductsIsSameAsDisplayedInTotal()
-        //{
-        //    int i;
-        //    driver.Navigate().Back();
-        //    driver.FindElement(By.XPath(xpathUtility.allProductsXpath + "[2]")).Click();
-        //    var totalamount = driver.FindElements(By.XPath(xpathUtility.totalamountXpath));
-        //    for (i = 1; i <= (totalamount.Count / 2); i++)
-        //    {
-        //        string text = driver.FindElement(By.XPath(xpathUtility.totalamountXpath + "[" + (i * 2) + "]")).Text;
-        //        Console.WriteLine(text);
-        //    }
-        //}
-    }
-}
+   
 

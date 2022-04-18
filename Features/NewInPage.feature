@@ -21,7 +21,7 @@ Scenario: To validate if New Arrival's Products are clickable
 	And user closed the browser
 
 @NewInPage
-Scenario: To validate user is able to redirect to next pages by digit buttons
+Scenario: To validate user is able to redirect to next pages of NewInPage by digit buttons
 	Given user is on Landing page of the application
 	And user managed the cookies 
 	When user clicked on New In menu button

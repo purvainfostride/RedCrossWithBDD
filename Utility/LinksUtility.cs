@@ -26,7 +26,8 @@ namespace RedCrossWithBDD.Utility
         public string virtualGiftsPageUrl = "https://giftshop.redcross.org.uk/collections/virtual-giving";
         public string salePageUrl = "https://giftshop.redcross.org.uk/collections/sale";
         public string cartPageUrl = "https://giftshop.redcross.org.uk/cart";
-        public string pagesUrl = "https://giftshop.redcross.org.uk/collections/new-in?page=";
+        public string newInPagesUrl = "https://giftshop.redcross.org.uk/collections/new-in?page=";
+        public string greetingsPage="https://giftshop.redcross.org.uk/collections/greetings-cards?page=";
 
 
     }

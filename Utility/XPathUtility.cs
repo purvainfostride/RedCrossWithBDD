@@ -16,7 +16,9 @@ namespace RedCrossWithBDD.Utility
         public string displayFilterXpath = "((//div[@class='collection__toolbar ']//div[@class='value-picker-wrapper'])//span[@class='hidden-phone'])[1]";
         public string displayFilterButtonXpath = "((//div[@class='collection__toolbar ']//div[@class='value-picker__choice-list'])//button)";
         public string sortbyFilterXpath = "((//div[@class='collection__toolbar ']//div[@class='value-picker-wrapper'])//span[@class='hidden-phone'])[2]";
-
+        
+        public string displayFilterGreetingXpath= "(//div[@class='collection__toolbar collection__toolbar--bordered']//button[@class='value-picker-button'])[1]";
+        public string displayFilterButtonGreetingXpath = "(//div[@class='collection__toolbar collection__toolbar--bordered']//div[@class='value-picker__choice-list']//button)";
         public string totalamountXpath = "(//tbody//span)";
 
         //menubar
