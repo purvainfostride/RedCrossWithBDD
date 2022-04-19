@@ -72,8 +72,8 @@ Scenario: To Validate total price of cart products is same as displayed in total
 	And user managed the cookies 
 	And user clicked on New In menu button
 	And user is redirected to New Arrivals page
-	#And user clicked on the product to be selected
-	#When user added the gift to cart
+	And user is having product in cart
+	When user added another product in cart
 	Then user Validate total price of cart products is same as displayed in total 
 	And user closed the browser
 
