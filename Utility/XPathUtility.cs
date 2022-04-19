@@ -32,6 +32,6 @@ namespace RedCrossWithBDD.Utility
 
         public string qIncXpath = "(//div[@class='quantity-selector']//button[@data-action='increase-quantity'])";
         public string qDecXpath = "(//div[@class='quantity-selector']//button[@data-action='decrease-quantity'])";
-
+        public string fTextXpath = "(//tbody//tr//div[@class='line-item__meta'])//a[1]";
     }
 }

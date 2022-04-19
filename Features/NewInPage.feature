@@ -85,3 +85,13 @@ Scenario: To validate quantity updation in new arrival's cart page
 	#And user clicked on the product to be selected
 	Then user validate quantity updation in new arrival's cart page
 	And user closed the browser
+
+@NewInPage
+Scenario: To validate new added products are above already added products in cart
+	Given user is on Landing page of the application
+	And user managed the cookies 
+	And user clicked on New In menu button
+	And user is redirected to New Arrivals page
+	#And user clicked on the product to be selected
+	Then user validate new added products are above already added products in cart
+	And user closed the browser
