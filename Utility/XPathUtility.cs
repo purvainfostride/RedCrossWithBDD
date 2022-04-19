@@ -30,6 +30,8 @@ namespace RedCrossWithBDD.Utility
         public string homewareMenuButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Homeware')]";
         public string beautyMenuButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Beauty')]";
 
+        public string qIncXpath = "(//div[@class='quantity-selector']//button[@data-action='increase-quantity'])";
+        public string qDecXpath = "(//div[@class='quantity-selector']//button[@data-action='decrease-quantity'])";
 
     }
 }

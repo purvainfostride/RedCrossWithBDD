@@ -127,13 +127,7 @@ namespace RedCrossWithBDD.StepDefinitions
             homePage.UserClickedOnSaleMenuButton();
             Assert.AreEqual(salePageUrl, driver.Url);
         }
-
-        [Then(@"user closed the browser")]
-        public void ThenUserClosedTheBrowser()
-        {
-            methodsUtility.UserClosedTheBrowser();
-            
-        }
+        
 
 
         [Then(@"user clicked on Clothing menu button")]
@@ -167,6 +161,13 @@ namespace RedCrossWithBDD.StepDefinitions
                 //driver.Navigate().Back();
                 Thread.Sleep(1000);
             }
+        }
+        [TearDown]
+        [Then(@"user closed the browser")]
+        public void ThenUserClosedTheBrowser()
+        {
+            methodsUtility.UserClosedTheBrowser();
+
         }
 
     }

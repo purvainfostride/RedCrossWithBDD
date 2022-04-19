@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,10 +18,12 @@ namespace RedCrossWithBDD.Utility
             var stationarypageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
             var p1 = stationarypageProducts.Count();
         }
-
+        
         public void UserClosedTheBrowser()
         {
             driver.Quit();  
         }
+
+       
     }
 }

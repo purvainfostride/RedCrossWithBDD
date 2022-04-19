@@ -116,11 +116,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("To validate if New Arrival\'s Products are clickable")]
-        [NUnit.Framework.CategoryAttribute("NewInPageProducts")]
+        [NUnit.Framework.CategoryAttribute("NewInPage")]
         public void ToValidateIfNewArrivalsProductsAreClickable()
         {
             string[] tagsOfScenario = new string[] {
-                    "NewInPageProducts"};
+                    "NewInPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate if New Arrival\'s Products are clickable", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 15
@@ -365,11 +365,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("To Validate total price of cart products is same as displayed in total")]
-        [NUnit.Framework.CategoryAttribute("checkout")]
+        [NUnit.Framework.CategoryAttribute("NewInPage")]
         public void ToValidateTotalPriceOfCartProductsIsSameAsDisplayedInTotal()
         {
             string[] tagsOfScenario = new string[] {
-                    "checkout"};
+                    "NewInPage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate total price of cart products is same as displayed in total", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 70
@@ -396,6 +396,44 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 77
  testRunner.Then("user Validate total price of cart products is same as displayed in total", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("To validate quantity updation in new arrival\'s cart page")]
+        [NUnit.Framework.CategoryAttribute("NewInPage")]
+        public void ToValidateQuantityUpdationInNewArrivalsCartPage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "NewInPage"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To validate quantity updation in new arrival\'s cart page", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 80
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 81
+ testRunner.Given("user is on Landing page of the application", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 82
+ testRunner.And("user managed the cookies", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 83
+ testRunner.And("user clicked on New In menu button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 84
+ testRunner.And("user is redirected to New Arrivals page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 86
+ testRunner.Then("user validate quantity updation in new arrival\'s cart page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
