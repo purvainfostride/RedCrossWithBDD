@@ -99,7 +99,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [When(@"user clicked on Shope Home menu button")]
 
         [Then(@"user is on Shope Home page of the application")]
-        public void ThenUserIsOnShopeHomePageOfTheApplication()
+        public void UserIsOnShopeHomePageOfTheApplication()
         {
             homePage.UserClickedOnShopeHomeMenuButton();
             Assert.AreEqual(url, driver.Url);
@@ -113,7 +113,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [Given(@"user is on Virtual Gifts Page")]
         [When(@"user is on Virtual Gifts Page")]
         [Then(@"user clicked on Virtual Gifts menu button")]
-        public void ThenUserIsRedirectedToVirtualGiftsPage()
+        public void UserIsRedirectedToVirtualGiftsPage()
         {
             homePage.UserClickedOnVirtualGiftsMenuButton();
             Assert.AreEqual(virtualGiftsPageUrl, driver.Url);
@@ -122,7 +122,7 @@ namespace RedCrossWithBDD.StepDefinitions
         [When(@"user clicked on Sale menu button")]
         [Then(@"user clicked on Sale menu button")]
         [Then(@"user is redirected to Sale page")]
-        public void ThenUserIsRedirectedToSalePage()
+        public void UserIsRedirectedToSalePage()
         {
             homePage.UserClickedOnSaleMenuButton();
             Assert.AreEqual(salePageUrl, driver.Url);
@@ -131,23 +131,39 @@ namespace RedCrossWithBDD.StepDefinitions
 
 
         [Then(@"user clicked on Clothing menu button")]
-        public void ThenUserClickedOnClothingMenuButton()
+        public void UserClickedOnClothingMenuButton()
         {
             homePage.UserClickedOnClothingMenuButton();
         }
 
 
         [Then(@"user clicked on Homeware menu button")]
-        public void ThenUserClickedOnHomewareMenuButton()
+        public void UserClickedOnHomewareMenuButton()
         {
             homePage.UserClickedOnHomewareMenuButton();
         }
-
-
-        [Then(@"user clicked on Beauty menu button")]
-        public void ThenUserClickedOnBeautyMenuButton()
+        [When(@"user clicked on New In menu button")]
+        [Then(@"user clicked on New In menu button")]
+        [Given(@"user clicked on New In menu button")]
+        [Given(@"user is on New Arrivals page")]
+        [When(@"user is on New Arrivals page")]
+        [Then(@"user is on New Arrivals page")]
+        public void UserIsRedirectedToNewArrivalsPage()
         {
-            driver.FindElement(By.XPath(xpathUtility.beautyMenuButtonXpath)).Click();
+            homePage.UserClickedOnNewInMenuButton();
+            Assert.AreEqual(newInPageUrl, driver.Url);
+        }
+        [When(@"user clicked on Stationary menu button")]
+        [Given(@"user clicked on Stationary menu button")]
+        [Then(@"user clicked on Stationary menu button")]
+        public void UserClickedOnStationaryMenuButton()
+        {
+            homePage.UserClickedOnStationaryMenuButton();
+        }
+        [Then(@"user clicked on Beauty menu button")]
+        public void UserClickedOnBeautyMenuButton()
+        {
+            homePage.UserClickedOnBeautyMenuButton();
         }
         [When(@"user clicked on menu buttons")]
         public void WhenUserClickedOnMenuButtons()

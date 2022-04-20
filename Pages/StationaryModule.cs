@@ -6,10 +6,7 @@ namespace RedCrossWithBDD.Pages
 {
     public class StationaryModule:LinksUtility
     {
-        public void UserClickedOnStationaryMenuButton()
-        {
-            driver.FindElement(By.XPath("//li[@class='nav-bar__item']//a[contains(text(),'Stationery')]")).Click();
-        }
+
         public void UserSelectedGreetingCardsCatagoryToShop()
         {
             driver.FindElement(By.XPath("((//nav[@class='nav-bar']//li)[12]//li)[2]//a")).Click();

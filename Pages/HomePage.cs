@@ -96,31 +96,38 @@ namespace RedCrossWithBDD.Pages
 
         public void UserClickedOnShopeHomeMenuButton()
         {
-            driver.FindElement(By.XPath(xpathUtility.shopHomeButtonXpath)).Click();
+            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[1]")).Click();
         }
 
 
         public void UserClickedOnNewInMenuButton()
         {
-            driver.FindElement(By.XPath(xpathUtility.newInButtonXpath)).Click();
+            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[2]")).Click();
         }
 
         public void UserClickedOnVirtualGiftsMenuButton()
         {
-            driver.FindElement(By.XPath(xpathUtility.virtualGiftsButtonXpath)).Click();
+            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[7]")).Click();
         }
         public void UserClickedOnSaleMenuButton()
         {
-            driver.FindElement(By.XPath(xpathUtility.saleButtonXpath)).Click();
+            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[8]")).Click();
         }
         public void UserClickedOnClothingMenuButton()
         {
-            driver.FindElement(By.XPath(xpathUtility.clothingMenuButtonXpath)).Click();
+            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[3]")).Click();
         }
         public void UserClickedOnHomewareMenuButton()
         {
-            driver.FindElement(By.XPath(xpathUtility.homewareMenuButtonXpath)).Click();
+            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[4]")).Click();
         }
-
+        public void UserClickedOnStationaryMenuButton()
+        {
+            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[5]")).Click();
+        }
+        public void UserClickedOnBeautyMenuButton()
+        {
+            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[6]")).Click();
+        }
     }
 }

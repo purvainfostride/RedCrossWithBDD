@@ -17,7 +17,7 @@ namespace RedCrossWithBDD.StepDefinitions
     {
         HomePage homePage = new HomePage();
         XPathUtility xpathUtility = new XPathUtility();
-
+        CartPageSteps cartPageSteps= new CartPageSteps();
 
         [Then(@"New Arrival's Product count is same as displayed")]
         public void ThenNewArrivalsProductCountIsSameAsDisplayed()
@@ -98,16 +98,7 @@ namespace RedCrossWithBDD.StepDefinitions
 
             }
         }
-        [When(@"user clicked on New In menu button")]
-        [Then(@"user clicked on New In menu button")]
-        [Given(@"user clicked on New In menu button")]
-        [Given(@"user is redirected to New Arrivals page")]
-        [Then(@"user is redirected to New Arrivals page")]
-        public void ThenUserIsRedirectedToNewArrivalsPage()
-        {
-            homePage.UserClickedOnNewInMenuButton();
-            Assert.AreEqual(newInPageUrl, driver.Url);
-        }
+
         [Then(@"user validate whether Display Filter is Sorting the products by range")]
         public void WhenUserSelectedDisplayFilter()
         {
@@ -197,58 +188,10 @@ namespace RedCrossWithBDD.StepDefinitions
             }
 
         }
-        [Then(@"user validate quantity updation in new arrival's cart page")]
-        public void ThenUserValidateQuantityUpdationInNewArrivalsCartPage()
-        {
-            var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
-            newinpageProducts.Count();
-            driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[1]")).Click();
-            driver.FindElement(By.XPath("//div[@class='product-form__payment-container']//button")).Click();
-            var totalamount = driver.FindElements(By.XPath(xpathUtility.totalamountXpath));
-            for (int j = 1; j <= (totalamount.Count / 2); j++)
-            {
-                string originalPrice = driver.FindElement(By.XPath(xpathUtility.totalamountXpath + "[" + ((j * 2) - 1) + "]")).Text;
-                Double priceBeforeUpdation = Convert.ToDouble(originalPrice.Substring(1));
-                driver.FindElement(By.XPath(xpathUtility.qIncXpath + "[" + (j * 2) + "]")).Click();
-                string priceAfterInc = driver.FindElement(By.XPath(xpathUtility.totalamountXpath + "[" + (j * 2) + "]")).Text;
-                Double priceAInc = Convert.ToDouble(priceAfterInc.Substring(1));
-                Assert.AreEqual(priceBeforeUpdation * j * 2, priceAInc);
-                driver.FindElement(By.XPath(xpathUtility.qDecXpath + "[" + (j * 2) + "]")).Click();
-                string priceAfterDec = driver.FindElement(By.XPath(xpathUtility.totalamountXpath + "[" + (j * 2) + "]")).Text;
-                Double priceADec = Convert.ToDouble(priceAfterDec.Substring(1));
-                Assert.AreEqual(priceBeforeUpdation, priceADec);
-                if (j == (totalamount.Count / 2))
-                {
-                    break;
-                }
-;
-            }
-        }
-        [Then(@"user validate new added products are above already added products in cart")]
-        public void ThenUserValidateNewAddedProductsAreAboveAlreadyAddedProductsInCart()
-        {
-            var newInPageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
-            for (int i = 1; i <= newInPageProducts.Count; i++)
-            {
-                if (i == 5 || i == 19 || i == 22 || i == 28 || i == 31)
-                {
-                    continue;
-                }
-                string newInPage= driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + i + "]")).Text;
-                Console.WriteLine("newinpage: "+newInPage);
-                IWebElement newInPageProduct = driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + i + "]"));
-                newInPageProduct.Click();
-
-                driver.FindElement(By.XPath("//div[@class='product-form__payment-container']//button")).Click();
-                string fText=driver.FindElement(By.XPath(xpathUtility.fTextXpath)).Text;
-                Console.WriteLine("Incart: " + fText);
-                Assert.AreEqual(newInPage, fText);
-                driver.FindElement(By.XPath(xpathUtility.newInButtonXpath)).Click();
-            }
-
-        }
+        
+        
     }
 }
 
-   
+
 

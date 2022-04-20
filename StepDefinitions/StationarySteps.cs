@@ -12,14 +12,7 @@ namespace RedCrossWithBDD.StepDefinitions
         StationaryModule stationaryModule = new StationaryModule();
         XPathUtility xpathUtility = new XPathUtility();
         MethodsUtility utilMethods=new MethodsUtility();
-        [When(@"user clicked on Stationary menu button")]
-        [Given(@"user clicked on Stationary menu button")]
-        [Then(@"user clicked on Stationary menu button")]
-        public void WhenUserClickedOnStationaryMenuButton()
-        {
-            stationaryModule.UserClickedOnStationaryMenuButton();
-        }
-
+        
         [Given(@"user selected greeting cards catagory to shop")]
         [When(@"user selected greeting cards catagory to shop")]
         [Then(@"user selected greeting cards catagory to shop")]

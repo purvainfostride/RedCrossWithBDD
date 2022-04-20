@@ -5,7 +5,7 @@ Background:
 Given user is on Landing page of the application
 And user managed the cookies 
 When user clicked on New In menu button
-Then user is redirected to New Arrivals page
+Then user is on New Arrivals page
 
 @NewInPage
 Scenario: Whether the New Arrival's Page Products are equal in total as displayed
@@ -36,14 +36,3 @@ Scenario: Display Filter is Sorting the products by range
 Scenario: Sort by Filter is Sorting the products by range
 	Then user validate whether Sort by Filter is Sorting the products by range
 
-@NewInPage
-Scenario: Total price of cart products is same as displayed in total 
-	Then user Validate total price of cart products is same as displayed in total 
-
-@NewInPage
-Scenario: Quantity updation in new arrival's cart page
-	Then user validate quantity updation in new arrival's cart page
-
-@NewInPage
-Scenario: Whether new added products are above already added products in cart
-	Then user validate new added products are above already added products in cart

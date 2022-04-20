@@ -24,6 +24,13 @@ namespace RedCrossWithBDD.Utility
             driver.Quit();  
         }
 
-       
+        public void Enter()
+        {
+            Console.WriteLine("Choose A page to shop: /n ShopHome 1 /n NewArrival");
+            int menubutton = Console.Read();
+            Console.WriteLine("menubutton is: " + menubutton);
+
+        }
+
     }
 }

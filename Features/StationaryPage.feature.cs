@@ -143,9 +143,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 21
  testRunner.And("user is on Enamel Pin Badges page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 22
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
             }
             this.ScenarioCleanup();
         }
@@ -183,9 +180,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 30
  testRunner.Then("greeting cards page Products count is same as displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 31
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -227,9 +221,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 39
  testRunner.Then("user is able to redirect to next pages of GreetingcardsPage with numbers", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 40
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
             }
             this.ScenarioCleanup();
         }
@@ -267,9 +258,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 48
  testRunner.And("user is able to redirect to next pages of GreetingcardsPage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 49
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -312,9 +300,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 58
  testRunner.And("user is able to redirect to previous pages of GreetingcardsPage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 59
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
             }
             this.ScenarioCleanup();
         }
@@ -353,9 +338,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 67
  testRunner.Then("user validate whether Display Filter of greetingsPage is Sorting the products by " +
                         "range", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 68
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -396,9 +378,6 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Then("user validate whether Sort by Filter of greetingsPage is Sorting the products by " +
                         "range", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 78
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
             }
             this.ScenarioCleanup();
         }
@@ -436,9 +415,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 86
  testRunner.Then("birthday cards page Products count is same as displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 87
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -480,9 +456,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 95
  testRunner.Then("Congratulations cards page Products count is same as displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 96
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
             }
             this.ScenarioCleanup();
         }
@@ -520,9 +493,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 104
  testRunner.Then("Thankyou cards page Products count is same as displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 105
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -562,9 +532,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 113
  testRunner.Then("Wrapping cards page Products count is same as displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 114
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
             }
             this.ScenarioCleanup();
         }
@@ -603,9 +570,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 122
  testRunner.Then("Notebooks cards page Products count is same as displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 123
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
             }
             this.ScenarioCleanup();
         }
@@ -643,9 +607,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 131
  testRunner.Then("Enamel Pin Badges page Products count is same as displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 132
- testRunner.And("user closed the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
