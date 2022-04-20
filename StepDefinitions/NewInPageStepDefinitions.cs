@@ -31,7 +31,7 @@ namespace RedCrossWithBDD.StepDefinitions
 
                 if (i == 2)
                 {
-                    Assert.AreEqual(79, count);
+                    Assert.AreEqual(83, count);
                     break;
                 }
 

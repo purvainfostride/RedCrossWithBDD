@@ -6,7 +6,7 @@ Scenario: To Validate whether Virtual Gifts menu button directing user to virtua
 	And user managed the cookies 
 	When user clicked on Virtual Gifts menu button
 	Then user is on Virtual Gifts Page
-	And user closed the browser
+
 
 @VirtualPage
 Scenario: To Validate whether user is able to select virtual gifts to send
@@ -15,7 +15,7 @@ Scenario: To Validate whether user is able to select virtual gifts to send
 	And user clicked on Virtual Gifts menu button
 	When user is on Virtual Gifts Page
 	Then user clicked on the gift to be selected
-	And user closed the browser
+
 
 @AddVirtualPageProductToCart
 Scenario: To Validate whether user is able to Add Virtual gift to cart with Greeting Card
@@ -27,7 +27,7 @@ Scenario: To Validate whether user is able to Add Virtual gift to cart with Gree
 	Then user selected a greeting card
 	And user entered the Message
 	And user added the gift to cart
-	And user closed the browser
+
 
 @AddVirtualPageProductToCart
 Scenario: To Validate whether user is able to Add Virtual gift to cart with Ecard
@@ -42,7 +42,7 @@ Scenario: To Validate whether user is able to Add Virtual gift to cart with Ecar
 	And user entered the Message with word limit
 	And user entered the Message Recipient's Email
 	And user added the gift to cart
-	And user closed the browser
+
 
 @AddVirtualPageProductToCart
 Scenario: To Validate whether user is able to Add Virtual gift to cart without any card
@@ -54,7 +54,7 @@ Scenario: To Validate whether user is able to Add Virtual gift to cart without a
 	Then user haven't selected a card
 	And user entered the Message which is optional
 	And user added the gift to cart
-	And user closed the browser
+
 
 @checkoutVirtualPageProduct
 Scenario: To Validate User is able to checkout the gift from cart
@@ -68,7 +68,7 @@ Scenario: To Validate User is able to checkout the gift from cart
 	And user added the gift to cart
 	And user selected keeping in touch
 	Then user checkout the product from cart
-	And user closed the browser
+
 
 @checkoutVirtualPageProduct
 Scenario: To Validate User is able to add suggested gift and checkout from cart
@@ -85,7 +85,7 @@ Scenario: To Validate User is able to add suggested gift and checkout from cart
 	And user added the gift to cart
 	And user selected keeping in touch
 	And user checkout the product from cart
-	And user closed the browser
+
 	
 @checkoutVirtualPageProduct
 Scenario: To Validate User is able to perform payment transaction 

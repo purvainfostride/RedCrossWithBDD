@@ -162,8 +162,8 @@ namespace RedCrossWithBDD.StepDefinitions
                 Thread.Sleep(1000);
             }
         }
-        [TearDown]
-        [Then(@"user closed the browser")]
+        [AfterScenario]
+
         public void ThenUserClosedTheBrowser()
         {
             methodsUtility.UserClosedTheBrowser();
