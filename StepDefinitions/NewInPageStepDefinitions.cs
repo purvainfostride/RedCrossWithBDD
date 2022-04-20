@@ -131,24 +131,12 @@ namespace RedCrossWithBDD.StepDefinitions
                 {
                     IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + j + "]"));
                     Console.WriteLine(j + ": " + d.Text);
+
+                    Assert.AreEqual(d.Text,met)
                 }
             }
-            //string path = @"C:\\Users\\Purva\\C#\\RedCrossWithBDD\\TestData\\NewInPageData.xls";
-            //FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
-            //HSSFWorkbook wb = new HSSFWorkbook(fs);
-            //ISheet sheet = wb.GetSheetAt(0);
-            //if (sheet != null)
-            //{
-            //    int rowCount = sheet.LastRowNum;
-            //    Console.WriteLine(rowCount);
-            //    for (int i = 0; i < rowCount; i++)
-            //    {
-            //        IRow curRow = sheet.GetRow(i);
-            //        var cellvalue0 = curRow.GetCell(0).StringCellValue.Trim();
-            //        Console.WriteLine(cellvalue0);
-            //    }
+            
 
-            //}
         }
 
         [Then(@"user Validate total price of cart products is same as displayed in total")]
