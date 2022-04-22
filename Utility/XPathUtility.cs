@@ -37,6 +37,9 @@ namespace RedCrossWithBDD.Utility
         public string fTextXpath = "(//tbody//tr//div[@class='line-item__meta'])//a[1]";
         public string addToCartXpath = "//div[@class='product-form__payment-container']//button";
 
-
+        //Navigation
+        public string navigationBarXpath = "//div[@class='card']//ul[@class='collection__filter-linklist']//li/a";
+        public string navigationBardropdownBtnXpath="//div[@class='card']//ul[@class='collection__filter-linklist']//li//button";
+        public string menuBardropdownBtnXpath = "//li[@class='nav-bar__item']//li";
     }
 }

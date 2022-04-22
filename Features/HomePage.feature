@@ -32,4 +32,5 @@ Scenario: User is able to login with valid credentials
 @HomePage
 Scenario: To validate the menu bar buttons functionality
 	When user clicked on menu buttons
+
 	

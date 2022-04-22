@@ -2,13 +2,7 @@ using RedCrossWithBDD.Pages;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using RedCrossWithBDD.Utility;
-using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
-using System.Text;
-using System.Text.RegularExpressions;
-using NPOI.Util;
-using NPOI.HSSF.UserModel;
-using NPOI.SS.UserModel;
+
 
 namespace RedCrossWithBDD.StepDefinitions
 {
@@ -120,7 +114,6 @@ namespace RedCrossWithBDD.StepDefinitions
                 driver.FindElement(By.XPath(xpathUtility.displayFilterButtonXpath + "[" + i + "]")).Click();
                 Thread.Sleep(3000);
                 var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
-                Console.WriteLine("Filter" + i);
                 string textFile = @"C:\Users\Purva\C#\RedCrossWithBDD\TestData\NewinPageFilter.txt";
                 string[] lines = File.ReadAllLines(textFile);
                 while (k <= lines.Length)
@@ -128,22 +121,17 @@ namespace RedCrossWithBDD.StepDefinitions
                     for (int j = 1; j <= newinpageProducts.Count; j++)
                     {
                         IWebElement d = driver.FindElement(By.XPath("(" + xpathUtility.allProductsXpath + ")" + "[" + j + "]"));
-                        Console.WriteLine(k);
-                        Console.WriteLine(j);
-
                         Assert.AreEqual(lines[k], d.Text);
                         k++;
                     }
-                    Console.WriteLine("for break: " + k);
-                    Console.WriteLine(newinpageProducts.Count + 1);
-                    if (k == newinpageProducts.Count + 1) { break;}
-                    else if (k == (newinpageProducts.Count * 2) + 1) { break;}
-                    else if (k == (newinpageProducts.Count * 3) + 1) { break; }
-                    else if (k == (newinpageProducts.Count * 4) + 1) { break; }
-                    else if (k == (newinpageProducts.Count * 5) + 1) { break; }
-                    else if (k == (newinpageProducts.Count * 6) + 1) { break; }
-                    else if (k == (newinpageProducts.Count * 7) + 1) { break; }
-                    else if (k == (newinpageProducts.Count * 8) + 1) { break; }
+                    if (k == newinpageProducts.Count + 1) {break;}
+                    else if (k == (newinpageProducts.Count * 2) + 1) {break;}
+                    else if (k == (newinpageProducts.Count * 3) + 1) {break;}
+                    else if (k == (newinpageProducts.Count * 4) + 1) {break;}
+                    else if (k == (newinpageProducts.Count * 5) + 1) {break;}
+                    else if (k == (newinpageProducts.Count * 6) + 1) {break;}
+                    else if (k == (newinpageProducts.Count * 7) + 1) {break;}
+                    else if (k == (newinpageProducts.Count * 8) + 1) {break;}
                     k = k + 1;
                 }
             }
