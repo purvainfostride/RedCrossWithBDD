@@ -120,16 +120,16 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("To Validate Stationary side Navigation bar options")]
+        [NUnit.Framework.DescriptionAttribute("To Validate BeautyPage side Navigation bar options")]
         [NUnit.Framework.CategoryAttribute("BeautyPage")]
         [NUnit.Framework.CategoryAttribute("NavigationBar")]
-        public void ToValidateStationarySideNavigationBarOptions()
+        public void ToValidateBeautyPageSideNavigationBarOptions()
         {
             string[] tagsOfScenario = new string[] {
                     "BeautyPage",
                     "NavigationBar"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate Stationary side Navigation bar options", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To Validate BeautyPage side Navigation bar options", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 13
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -145,6 +145,181 @@ this.FeatureBackground();
 #line hidden
 #line 14
  testRunner.Then("user is redirecting to sub pages of BeautyPage by side Navigation bar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("user is able to redirect to view all subpage of BeautyPage")]
+        [NUnit.Framework.CategoryAttribute("BeautyPage")]
+        [NUnit.Framework.CategoryAttribute("ViewAll")]
+        public void UserIsAbleToRedirectToViewAllSubpageOfBeautyPage()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "BeautyPage",
+                    "ViewAll"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("user is able to redirect to view all subpage of BeautyPage", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 17
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 3
+this.FeatureBackground();
+#line hidden
+#line 18
+ testRunner.Then("user is able to redirect to view all subpage of beauty page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Whether the products of view all subpage of BeautyPage are equal in total as disp" +
+            "layed")]
+        [NUnit.Framework.CategoryAttribute("BeautyPage")]
+        [NUnit.Framework.CategoryAttribute("ViewAll")]
+        public void WhetherTheProductsOfViewAllSubpageOfBeautyPageAreEqualInTotalAsDisplayed()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "BeautyPage",
+                    "ViewAll"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Whether the products of view all subpage of BeautyPage are equal in total as disp" +
+                    "layed", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 21
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 3
+this.FeatureBackground();
+#line hidden
+#line 22
+ testRunner.When("user is able to redirect to view all subpage of beauty page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 23
+ testRunner.Then("products of view all subpage of BeautyPage are equal in total as displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Whether the products of Face subpage of BeautyPage are equal in total as displaye" +
+            "d")]
+        [NUnit.Framework.CategoryAttribute("BeautyPage")]
+        [NUnit.Framework.CategoryAttribute("Face")]
+        public void WhetherTheProductsOfFaceSubpageOfBeautyPageAreEqualInTotalAsDisplayed()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "BeautyPage",
+                    "Face"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Whether the products of Face subpage of BeautyPage are equal in total as displaye" +
+                    "d", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 26
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 3
+this.FeatureBackground();
+#line hidden
+#line 27
+ testRunner.When("user is able to redirect to Face subpage of beauty page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 28
+ testRunner.Then("products of Face subpage of BeautyPage are equal in total as displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Whether the products of Body subpage of BeautyPage are equal in total as displaye" +
+            "d")]
+        [NUnit.Framework.CategoryAttribute("BeautyPage")]
+        [NUnit.Framework.CategoryAttribute("Body")]
+        public void WhetherTheProductsOfBodySubpageOfBeautyPageAreEqualInTotalAsDisplayed()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "BeautyPage",
+                    "Body"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Whether the products of Body subpage of BeautyPage are equal in total as displaye" +
+                    "d", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 31
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 3
+this.FeatureBackground();
+#line hidden
+#line 32
+ testRunner.When("user is able to redirect to Body subpage of beauty page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 33
+ testRunner.Then("products of Body subpage of BeautyPage are equal in total as displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Whether the products of Emolyne subpage of BeautyPage are equal in total as displ" +
+            "ayed")]
+        [NUnit.Framework.CategoryAttribute("BeautyPage")]
+        [NUnit.Framework.CategoryAttribute("Emolyne")]
+        public void WhetherTheProductsOfEmolyneSubpageOfBeautyPageAreEqualInTotalAsDisplayed()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "BeautyPage",
+                    "Emolyne"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Whether the products of Emolyne subpage of BeautyPage are equal in total as displ" +
+                    "ayed", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 36
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 3
+this.FeatureBackground();
+#line hidden
+#line 37
+ testRunner.When("user is able to redirect to Emolyne subpage of beauty page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 38
+ testRunner.Then("products of Emolyne subpage of BeautyPage are equal in total as displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

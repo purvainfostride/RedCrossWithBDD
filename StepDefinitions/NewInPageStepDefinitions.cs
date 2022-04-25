@@ -22,15 +22,20 @@ namespace RedCrossWithBDD.StepDefinitions
         [Then(@"New Arrival's Product count is same as displayed")]
         public void ThenNewArrivalsProductCountIsSameAsDisplayed()
         {
-            var count = 0;
+            var newinpageProductsCount = 0;
             for (int i = 0; i <= 2; i++)
             {
                 var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.allProductsXpath));
                 var p1 = newinpageProducts.Count;
-                count = count + p1;
+                newinpageProductsCount = newinpageProductsCount + p1;
                 if (i == 2)
                 {
-                    Assert.AreEqual(83, count);
+                    string newInNavigationBarText = driver.FindElement(By.XPath(xpathUtility.NewInNavigationBarXpath)).Text;
+                    string newInNavigationBarText2 = string.Empty;
+                    var matches = Regex.Matches(newInNavigationBarText, @"\d+");
+                    foreach (var match in matches){newInNavigationBarText2 += match;}
+                    int newInNavigationBarVal = int.Parse(newInNavigationBarText2);
+                    Assert.AreEqual(newInNavigationBarVal, newinpageProductsCount);
                     break;
                 }
                 driver.FindElement(By.XPath(xpathUtility.nextbuttonXpath)).Click();

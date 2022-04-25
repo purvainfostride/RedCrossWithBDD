@@ -43,6 +43,7 @@ namespace RedCrossWithBDD.Utility
         //stationaryPage
         public string stationaryNavigationBarXpath = "((//div[@class='collection__filter-collapsible']//ul[@class='collection__filter-linklist'])[2]//a)";
         public string beautyNavigationBarXpath = "((//div[@class='collection__filter-collapsible']//ul[@class='collection__filter-linklist'])[4]//a)";
+        public string NewInNavigationBarXpath = "(//div[@class='card__section card__section--tight']//ul[@class='collection__filter-linklist']//li//a)[2]";
         //beautyPage
 
 
