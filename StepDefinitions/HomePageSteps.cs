@@ -12,7 +12,6 @@ namespace RedCrossWithBDD.StepDefinitions
         MethodsUtility methodsUtility = new MethodsUtility();
         XPathUtility xpathUtility = new XPathUtility();
 
-        private string menu = "//li[@class='nav-bar__item']";
 
         [Given(@"user initialized the browser")]
         [When(@"user navigated to the Application")]
@@ -160,18 +159,13 @@ namespace RedCrossWithBDD.StepDefinitions
         {
             homePage.UserClickedOnStationaryMenuButton();
         }
-        [Then(@"user clicked on Beauty menu button")]
-        public void UserClickedOnBeautyMenuButton()
-        {
-            homePage.UserClickedOnBeautyMenuButton();
-        }
         [When(@"user clicked on menu buttons")]
         public void WhenUserClickedOnMenuButtons()
         {
-            var newinpageProducts = driver.FindElements(By.XPath(menu));
+            var newinpageProducts = driver.FindElements(By.XPath(xpathUtility.menubarXpath));
             for (int i = 1; i <= newinpageProducts.Count; i++)
             {
-                IWebElement menuBar = driver.FindElement(By.XPath("(" + menu + ")" + "[" + i + "]"));
+                IWebElement menuBar = driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[" + i + "]"));
                 menuBar.Click();
                 //Assert.AreEqual(expected, d.Text);
                 //driver.Navigate().Back();

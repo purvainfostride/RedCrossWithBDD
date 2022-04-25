@@ -125,9 +125,6 @@ namespace RedCrossWithBDD.Pages
         {
             driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[4]")).Click();
         }
-        public void UserClickedOnBeautyMenuButton()
-        {
-            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[6]")).Click();
-        }
+        
     }
 }

@@ -23,8 +23,9 @@ namespace RedCrossWithBDD.Utility
 
         //menubar
         
-        public string menubarXpath = "//li[@class='nav-bar__item']";
+        public string menubarXpath = "(//li[@class='nav-bar__item'])";
         public string stationaryDropDownXpath = "(//ul[@class='nav-dropdown nav-dropdown--restrict'])[2]//li";
+        public string beautyDropDownXpath = "(//ul[@class='nav-dropdown nav-dropdown--restrict'])[4]//li";
         public string shopHomeButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Clothing')]";
         public string newInButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'New In ')]";
         public string virtualGiftsButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Virtual Gifts')]";
@@ -41,5 +42,9 @@ namespace RedCrossWithBDD.Utility
 
         //stationaryPage
         public string stationaryNavigationBarXpath = "((//div[@class='collection__filter-collapsible']//ul[@class='collection__filter-linklist'])[2]//a)";
+        public string beautyNavigationBarXpath = "((//div[@class='collection__filter-collapsible']//ul[@class='collection__filter-linklist'])[4]//a)";
+        //beautyPage
+
+
     }
 }

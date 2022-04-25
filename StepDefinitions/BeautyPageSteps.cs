@@ -1,0 +1,46 @@
+using RedCrossWithBDD.Pages;
+using RedCrossWithBDD.Utility;
+using OpenQA.Selenium;
+using NUnit.Framework;
+
+namespace RedCrossWithBDD.StepDefinitions
+{
+    [Binding]
+    public class BeautyPageSteps:LinksUtility
+    {
+        StationaryModule stationaryModule = new StationaryModule();
+        XPathUtility xpathUtility = new XPathUtility();
+        MethodsUtility utilMethods = new MethodsUtility();
+        HomePage homePage = new HomePage();
+
+        [When(@"user clicked on Beauty menu button")]
+        public void WhenUserClickedOnBeautyMenuButton()
+        {
+            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[6]")).Click();
+        }
+
+        [Then(@"user is redirecting to sub pages of BeautyPage page")]
+        public void ThenUserIsRedirectingToSubPagesOfBeautyPagePage()
+        {
+            var beautyDropDown = driver.FindElements(By.XPath(xpathUtility.beautyDropDownXpath));
+            for (int i = 1; i <= beautyDropDown.Count; i++)
+            {
+                driver.FindElement(By.XPath(xpathUtility.beautyDropDownXpath + "[" + i + "]")).Click();
+                if (i == beautyDropDown.Count - 1) { break; }
+                WhenUserClickedOnBeautyMenuButton();
+
+            }
+        }
+        [Then(@"user is redirecting to sub pages of BeautyPage by side Navigation bar")]
+        public void ThenUserIsRedirectingToSubPagesOfBeautyPageBySideNavigationBar()
+        {
+            driver.FindElement(By.XPath(xpathUtility.beautyDropDownXpath + "[1]")).Click();
+            var beautyNavigationBar = driver.FindElements(By.XPath(xpathUtility.beautyNavigationBarXpath));
+            for (int i = 2; i <= beautyNavigationBar.Count; i++)
+            {
+                driver.FindElement(By.XPath(xpathUtility.beautyNavigationBarXpath + "[" + i + "]")).Click();
+            }
+        }
+
+    }
+}
