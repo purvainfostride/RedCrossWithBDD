@@ -22,7 +22,9 @@ namespace RedCrossWithBDD.Utility
         public string totalamountXpath = "(//tbody//span)";
 
         //menubar
+        
         public string menubarXpath = "//li[@class='nav-bar__item']";
+        public string stationaryDropDownXpath = "(//ul[@class='nav-dropdown nav-dropdown--restrict'])[2]//li";
         public string shopHomeButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Clothing')]";
         public string newInButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'New In ')]";
         public string virtualGiftsButtonXpath = "//li[@class='nav-bar__item']//a[contains(text(),'Virtual Gifts')]";
@@ -37,6 +39,7 @@ namespace RedCrossWithBDD.Utility
         public string fTextXpath = "(//tbody//tr//div[@class='line-item__meta'])//a[1]";
         public string addToCartXpath = "//div[@class='product-form__payment-container']//button";
 
-
+        //stationaryPage
+        public string stationaryNavigationBarXpath = "((//div[@class='collection__filter-collapsible']//ul[@class='collection__filter-linklist'])[2]//a)";
     }
 }

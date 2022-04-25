@@ -119,11 +119,11 @@ namespace RedCrossWithBDD.Pages
         }
         public void UserClickedOnHomewareMenuButton()
         {
-            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[4]")).Click();
+            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[5]")).Click();
         }
         public void UserClickedOnStationaryMenuButton()
         {
-            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[5]")).Click();
+            driver.FindElement(By.XPath(xpathUtility.menubarXpath + "[4]")).Click();
         }
         public void UserClickedOnBeautyMenuButton()
         {

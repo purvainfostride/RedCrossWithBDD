@@ -12,6 +12,7 @@ namespace RedCrossWithBDD.StepDefinitions
         StationaryModule stationaryModule = new StationaryModule();
         XPathUtility xpathUtility = new XPathUtility();
         MethodsUtility utilMethods=new MethodsUtility();
+        HomePage homePage = new HomePage(); 
         
         [Given(@"user selected greeting cards catagory to shop")]
         [When(@"user selected greeting cards catagory to shop")]
@@ -19,6 +20,30 @@ namespace RedCrossWithBDD.StepDefinitions
         public void ThenUserSelectedGreetingCardsCatagoryToShop()
         {
             stationaryModule.UserSelectedGreetingCardsCatagoryToShop();
+        }
+   
+        [Then(@"user is redirecting to sub pages of stationary page")]
+        public void ThenUserIsRedirectingToSubPagesOfStationaryPage()
+        {
+            var stationaryDropDown = driver.FindElements(By.XPath(xpathUtility.stationaryDropDownXpath));
+            for (int i = 1; i <= stationaryDropDown.Count; i++)
+            {
+                driver.FindElement(By.XPath(xpathUtility.stationaryDropDownXpath + "[" + i + "]")).Click();
+                if (i == stationaryDropDown.Count - 1) { break; }
+                homePage.UserClickedOnStationaryMenuButton();
+
+            }
+        }
+
+        [Then(@"user is redirecting to sub pages of stationary page by side Navigation bar")]
+        public void WhenUserClickedOnSelectedNavbarOption()
+        {
+            driver.FindElement(By.XPath(xpathUtility.stationaryDropDownXpath +"[1]")).Click();
+            var stationaryNavigationBar = driver.FindElements(By.XPath(xpathUtility.stationaryNavigationBarXpath));
+            for (int i = 2; i <= stationaryNavigationBar.Count; i++)
+            {
+                driver.FindElement(By.XPath(xpathUtility.stationaryNavigationBarXpath + "[" + i + "]")).Click();
+            }
         }
 
         [Then(@"user is on greeting cards page")]
