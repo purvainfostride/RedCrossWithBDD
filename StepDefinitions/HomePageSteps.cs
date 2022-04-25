@@ -175,24 +175,9 @@ namespace RedCrossWithBDD.StepDefinitions
                 menuBar.Click();
                 //Assert.AreEqual(expected, d.Text);
                 //driver.Navigate().Back();
-                var menuBardropdownBtn = driver.FindElements(By.XPath(xpathUtility.menuBardropdownBtnXpath));
-                Console.WriteLine(i);
-                if (i == 3)
-                {
-                    Console.WriteLine(i);
-                    for (int j=1; j<= menuBardropdownBtn.Count; j++)
-                    {
-                        driver.FindElement(By.XPath("(" + menuBardropdownBtn + ")" + "[" + j + "]")).Click();
-                        Console.WriteLine(j);
-                    }
-                    Console.WriteLine(i);
-         
-                }
-               
                 Thread.Sleep(1000);
             }
         }
-
         [AfterScenario]
 
         public void ThenUserClosedTheBrowser()
